@@ -95,23 +95,16 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="start"
-            app:guidelineUseRtl="true"
+            android:gravity="center"
             android:text="@string/contact_data"
+            android:layout_marginTop="@dimen/space_16x"
             style="@style/CoinBitText.BodyAlternate.Small"
             app:layout_constraintTop_toBottomOf="@id/txtContactDialog"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            android:padding="@dimen/space_8x"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Enjoy!"
-        style="@style/CoinBitText.Body3.Dark"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/space_16x"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

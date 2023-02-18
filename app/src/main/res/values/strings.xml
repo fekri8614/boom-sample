@@ -24,5 +24,5 @@
     <string name="desc_welcome">Description</string>
     <string name="desc_welcome_desc">You can use Boom to read and search for books. Boom allows you to read books offline, but for better performance of the application, it is better to use the application online. It is possible to make changes in the Profile section by long clicking.</string>
     <string name="contact_txt">Contact me:</string>
-    <string name="contact_data">E–mail : fekri.mohammadreza86@gmail.com\nPhone : +98–914–703–1237</string>
+    <string name="contact_data">fekri.mohammadreza86@gmail.com</string>
 </resources>
