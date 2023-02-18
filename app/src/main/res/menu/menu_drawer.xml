@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_favos"
+        android:icon="@drawable/ic_favo"
+        android:title="Favorites!" />
+
+    <item android:title="More!">
+
+        <menu>
+
+            <item
+                android:id="@+id/menu_our_web"
+                android:icon="@drawable/ic_web"
+                android:title="Boom" />
+
+            <item
+                android:id="@+id/menu_read_more"
+                android:icon="@drawable/ic_read_more"
+                android:title="Read More!" />
+
+        </menu>
+
+    </item>
+
+</menu>

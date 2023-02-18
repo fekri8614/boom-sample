@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical|top"
+    android:padding="@dimen/space_16x"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@drawable/main_icon"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_text"
+        style="@style/CoinBitText.Body3.Dark"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/space_8x"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8x"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/detail_welcome"/>
+
+    <View
+        android:layout_width="100dp"
+        android:layout_height="1dp"
+        android:background="@color/background_main"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/space_8x"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16x">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtTitleDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/desc_welcome"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/CoinBitText.Body"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            app:guidelineUseRtl="true"
+            android:text="@string/desc_welcome_desc"
+            style="@style/CoinBitText.BodyAlternate.Small"
+            app:layout_constraintTop_toBottomOf="@id/txtTitleDialog"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="100dp"
+        android:layout_height="1dp"
+        android:background="@color/background_main"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/space_8x"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Developer: Mohammad-Reza Fekri"
+        style="@style/CoinBitText.Body"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/space_16x"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16x">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtContactDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_txt"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/CoinBitText.Body"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            app:guidelineUseRtl="true"
+            android:text="@string/contact_data"
+            style="@style/CoinBitText.BodyAlternate.Small"
+            app:layout_constraintTop_toBottomOf="@id/txtContactDialog"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enjoy!"
+        style="@style/CoinBitText.Body3.Dark"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/space_16x"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
