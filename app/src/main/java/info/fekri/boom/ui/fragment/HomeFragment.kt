@@ -66,7 +66,7 @@ class HomeFragment : Fragment(), ItemEvents {
                         "—the parakeets—\n" +
                         "the ones that talk best\n" +
                         "have separate cages.",
-                "https://artprojectsforkids.org/wp-content/uploads/2014/12/Pop-Art-Landscape-Post.jpg",
+                "https://www.omlet.us/images/originals/budgie_toy_skateboard.jpg",
                 "https://learnwithhomer.com/library/genre/science/"
             ),
             Book(
@@ -100,7 +100,7 @@ class HomeFragment : Fragment(), ItemEvents {
                         "In the forests of the night,\n" +
                         "What immortal hand or eye\n" +
                         "Dare frame thy fearful symmetry?",
-                "https://artprojectsforkids.org/wp-content/uploads/2014/12/Pop-Art-Landscape-Post.jpg",
+                "https://www.kidsworldfun.com/images/short-stories/tiger-stripes-history-story.jpg",
                 "https://learnwithhomer.com/library/genre/science/"
             ),
             Book(
