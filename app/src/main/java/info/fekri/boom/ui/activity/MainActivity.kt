@@ -74,10 +74,10 @@ class MainActivity : AppCompatActivity() {
         binding.navigationViewMain.setNavigationItemSelectedListener {
             when (it.itemId) {
 
-                R.id.menu_favos -> {
+                R.id.menu_free_books -> {
                     binding.draweLayoutMain.closeDrawer(GravityCompat.START)
 
-                    Snackbar.make(binding.root, "Going to Favorites!...", Snackbar.LENGTH_LONG)
+                    Snackbar.make(binding.root, "Going to free books!...", Snackbar.LENGTH_LONG)
                         .setActionTextColor(ContextCompat.getColor(this, R.color.white))
                         .setBackgroundTint(ContextCompat.getColor(this, R.color.primaryColor))
                         .setAction("Cancel") {
@@ -87,13 +87,13 @@ class MainActivity : AppCompatActivity() {
                         .show()
                 }
 
-                R.id.menu_our_web -> {
+                R.id.menu_nyt_web -> {
                     binding.draweLayoutMain.closeDrawer(GravityCompat.START)
 
                     startActivity(
                         Intent(
                             Intent.ACTION_VIEW,
-                            Uri.parse("https://icnl.nlai.ir/bookreader.html")
+                            Uri.parse("https://www.nytimes.com/")
                         )
                     )
                 }

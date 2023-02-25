@@ -8,5 +8,5 @@ data class Book(
     val title: String,
     val desc: String,
     val coverImageUrl: String,
-    val website: String
+    val pdfUrl: String
 ): Parcelable

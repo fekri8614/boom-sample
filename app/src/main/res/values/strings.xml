@@ -25,4 +25,9 @@
     <string name="desc_welcome_desc">You can use Boom to read and search for books. Boom allows you to read books offline, but for better performance of the application, it is better to use the application online. It is possible to make changes in the Profile section by long clicking.</string>
     <string name="contact_txt">Contact me:</string>
     <string name="contact_data">fekri.mohammadreza86@gmail.com</string>
+    <string name="more">More!</string>
+    <string name="free_books">Free books!</string>
+    <string name="visit_nyt">Visit NYT</string>
+    <string name="read_more">Read More!</string>
+    <string name="error_message">Something went wrong</string>
 </resources>

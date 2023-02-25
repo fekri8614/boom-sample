@@ -2,7 +2,7 @@
 <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:gravity="center_vertical|top"
     android:padding="@dimen/space_16x"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -95,9 +95,8 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:gravity="center|start"
             android:text="@string/contact_data"
-            android:layout_marginTop="@dimen/space_16x"
             style="@style/CoinBitText.BodyAlternate.Small"
             app:layout_constraintTop_toBottomOf="@id/txtContactDialog"
             app:layout_constraintStart_toStartOf="parent"
