@@ -56,6 +56,11 @@ dependencies {
     // PdfViewer
     implementation 'com.github.afreakyelf:Pdf-Viewer:v1.0.7'
 
-    // BottomNavigation
-    implementation 'com.gauravk.bubblenavigation:bubblenavigation:1.0.7'
+    // Retrofit2 ->
+    def retrofit2_version = "2.9.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit2_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit2_version"
+
+    // Swipe-Refresh
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
 }

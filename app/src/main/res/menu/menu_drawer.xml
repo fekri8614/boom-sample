@@ -9,9 +9,9 @@
     <item android:title="@string/more">
         <menu>
             <item
-                android:id="@+id/menu_nyt_web"
+                android:id="@+id/menu_book_library"
                 android:icon="@drawable/ic_web"
-                android:title="@string/visit_nyt" />
+                android:title="@string/visit_library" />
             <item
                 android:id="@+id/menu_read_more"
                 android:icon="@drawable/ic_read_more"

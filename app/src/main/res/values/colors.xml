@@ -13,6 +13,8 @@
     <color name="tertiaryTextColor">#7e8795</color>
     <color name="primaryTextColor">#000000</color>
     <color name="secondaryTextColor">#000000</color>
+    <color name="black_dark">#272727</color>
+    <color name="red_cancel">#CC5B5B</color>
 
     <color name="background_main">#E0CDCD</color>
     <color name="yellow_back">#FFC107</color>

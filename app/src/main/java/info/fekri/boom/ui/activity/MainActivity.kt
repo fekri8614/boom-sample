@@ -16,9 +16,17 @@ import info.fekri.boom.R
 import info.fekri.boom.databinding.ActivityMainBinding
 import info.fekri.boom.databinding.ItemDialogReadMoreBinding
 import info.fekri.boom.databinding.ItemDialogShowWelcomeBinding
+import info.fekri.boom.databinding.ItemReadMoreDialogBinding
 import info.fekri.boom.ui.fragment.HomeFragment
 import info.fekri.boom.ui.fragment.ProfileFragment
-import info.fekri.boom.ui.fragment.SearchFragment
+import info.fekri.boom.ui.fragment.BuyFragment
+
+/**
+ *
+ * ### Boom is an application to read and search about books.
+ * #### Created and Developed by [Mohammad Reza Fekri](https://github.com/fekri8114)
+ *
+ * */
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -31,6 +39,7 @@ class MainActivity : AppCompatActivity() {
         // set our toolbar -->
         setSupportActionBar(binding.toolbarMain)
     }
+
     override fun onResume() {
         super.onResume()
         firstRun()
@@ -45,7 +54,7 @@ class MainActivity : AppCompatActivity() {
         val isFirstRun = shared.getBoolean("isFirst", true)
         if (isFirstRun) {
             val dialog = AlertDialog.Builder(this).create()
-            val dialogWelcomeBinding =ItemDialogShowWelcomeBinding.inflate(layoutInflater)
+            val dialogWelcomeBinding = ItemDialogShowWelcomeBinding.inflate(layoutInflater)
 
             dialog.setView(dialogWelcomeBinding.root)
             dialog.setCancelable(true)
@@ -54,6 +63,7 @@ class MainActivity : AppCompatActivity() {
             shared.edit().putBoolean("isFirst", false).apply()
         }
     }
+
     private fun firstRun() {
         replaceFragment(HomeFragment())
         binding.bottomNavigationMain.selectedItemId = R.id.menu_home
@@ -70,6 +80,7 @@ class MainActivity : AppCompatActivity() {
         actionBarDrawerToggle.syncState()
         binding.draweLayoutMain.addDrawerListener(actionBarDrawerToggle)
     }
+
     private fun navigationDrawer() {
         binding.navigationViewMain.setNavigationItemSelectedListener {
             when (it.itemId) {
@@ -87,17 +98,17 @@ class MainActivity : AppCompatActivity() {
                         .show()
                 }
 
-                R.id.menu_nyt_web -> {
+                R.id.menu_book_library -> {
                     binding.draweLayoutMain.closeDrawer(GravityCompat.START)
-
                     startActivity(
                         Intent(
                             Intent.ACTION_VIEW,
-                            Uri.parse("https://www.nytimes.com/")
+                            Uri.parse("https://www.oxfordowl.co.uk/")
                         )
                     )
                 }
 
+                // done
                 R.id.menu_read_more -> {
                     binding.draweLayoutMain.closeDrawer(GravityCompat.START)
 
@@ -107,6 +118,15 @@ class MainActivity : AppCompatActivity() {
                     dialog.setView(dialogBinding.root)
                     dialog.setCancelable(true)
                     dialog.show()
+
+                    dialogBinding.btnCancelDialogReadMore.setOnClickListener {
+                        dialog.dismiss()
+                    }
+
+                    dialogBinding.btnAcceptDialogReadMore.setOnClickListener {
+                        dialog.dismiss()
+                        showReadMoreDialog()
+                    }
                 }
 
             }
@@ -114,6 +134,17 @@ class MainActivity : AppCompatActivity() {
             true
         }
     }
+
+    private fun showReadMoreDialog() {
+        val dialog = androidx.appcompat.app.AlertDialog.Builder(this).create()
+        val redMoreBinding = ItemReadMoreDialogBinding.inflate(layoutInflater)
+
+        dialog.setView(redMoreBinding.root)
+        dialog.setCancelable(true)
+        dialog.show()
+
+    }
+
     private fun navigationBottom() {
         binding.bottomNavigationMain.setOnItemSelectedListener {
 
@@ -123,7 +154,7 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.menu_home -> replaceFragment(HomeFragment())
 
-                R.id.menu_search -> replaceFragment(SearchFragment())
+                R.id.menu_buy -> replaceFragment(BuyFragment())
 
             }
 
@@ -131,6 +162,7 @@ class MainActivity : AppCompatActivity() {
         }
         binding.bottomNavigationMain.setOnItemReselectedListener { }
     }
+
     private fun replaceFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.frame_main_container, fragment)

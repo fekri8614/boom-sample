@@ -10,9 +10,8 @@
     <string name="title">Title</string>
     <string name="sample_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</string>
     <string name="science">Science</string>
-    <string name="history">History</string>
     <string name="philosophy">Philosophy</string>
-    <string name="poems">Poems</string>
+    <string name="story">Story</string>
     <string name="search_message">Search in Google to see more…</string>
     <string name="name">Name</string>
     <string name="sample_name">Sample Name</string>
@@ -27,7 +26,15 @@
     <string name="contact_data">fekri.mohammadreza86@gmail.com</string>
     <string name="more">More!</string>
     <string name="free_books">Free books!</string>
-    <string name="visit_nyt">Visit NYT</string>
+    <string name="visit_library">Visit Library!</string>
     <string name="read_more">Read More!</string>
     <string name="error_message">Something went wrong</string>
+    <string name="sample_news">Some random news , Some random news , Some random news</string>
+    <string name="book_price">Book Price: %s</string>
+    <string name="book_name">Book name</string>
+    <string name="accept">Accept</string>
+    <string name="which_one_do_you_want">Which one do you want?</string>
+    <string name="amazon_library">Amazon library</string>
+    <string name="new_york_public_library">New York Public Library</string>
+    <string name="epic">Epic</string>
 </resources>
