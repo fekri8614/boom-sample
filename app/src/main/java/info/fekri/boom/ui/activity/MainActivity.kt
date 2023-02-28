@@ -24,14 +24,6 @@ import info.fekri.boom.ui.fragment.HomeFragment
 import info.fekri.boom.ui.fragment.ProfileFragment
 import info.fekri.boom.ui.fragment.BuyFragment
 
-/**
- *
- * ## Boom
- * ### Created and Developed by [Mohammad Reza Fekri](https://www.linkedin.com/in/mohammad-reza-fekri/)
- *
- * ##### This Activity is MainActivity (MainThread)
- * */
-
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
