@@ -2,6 +2,10 @@
 
 ---
 
+#### This application is developed and designed by myself.
+
+---
+
 #### About:
 Boom is an application to read and search about books.
 
@@ -25,3 +29,6 @@ Boom is an application to read and search about books.
 
 ##### I will update more. Will update Restful-API ability
 
+---
+
+I hope you enjoy :-)
