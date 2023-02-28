@@ -6,6 +6,8 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.content.ContextCompat
@@ -17,15 +19,17 @@ import info.fekri.boom.databinding.ActivityMainBinding
 import info.fekri.boom.databinding.ItemDialogReadMoreBinding
 import info.fekri.boom.databinding.ItemDialogShowWelcomeBinding
 import info.fekri.boom.databinding.ItemReadMoreDialogBinding
+import info.fekri.boom.extra.openWebsite
 import info.fekri.boom.ui.fragment.HomeFragment
 import info.fekri.boom.ui.fragment.ProfileFragment
 import info.fekri.boom.ui.fragment.BuyFragment
 
 /**
  *
- * ### Boom is an application to read and search about books.
- * #### Created and Developed by [Mohammad Reza Fekri](https://github.com/fekri8114)
+ * ## Boom
+ * ### Created and Developed by [Mohammad Reza Fekri](https://www.linkedin.com/in/mohammad-reza-fekri/)
  *
+ * ##### This Activity is MainActivity (MainThread)
  * */
 
 class MainActivity : AppCompatActivity() {
@@ -85,19 +89,6 @@ class MainActivity : AppCompatActivity() {
         binding.navigationViewMain.setNavigationItemSelectedListener {
             when (it.itemId) {
 
-                R.id.menu_free_books -> {
-                    binding.draweLayoutMain.closeDrawer(GravityCompat.START)
-
-                    Snackbar.make(binding.root, "Going to free books!...", Snackbar.LENGTH_LONG)
-                        .setActionTextColor(ContextCompat.getColor(this, R.color.white))
-                        .setBackgroundTint(ContextCompat.getColor(this, R.color.primaryColor))
-                        .setAction("Cancel") {
-                            Toast.makeText(applicationContext, "Canceled!", Toast.LENGTH_SHORT)
-                                .show()
-                        }
-                        .show()
-                }
-
                 R.id.menu_book_library -> {
                     binding.draweLayoutMain.closeDrawer(GravityCompat.START)
                     startActivity(
@@ -108,40 +99,49 @@ class MainActivity : AppCompatActivity() {
                     )
                 }
 
-                // done
                 R.id.menu_read_more -> {
                     binding.draweLayoutMain.closeDrawer(GravityCompat.START)
 
-                    val dialog = AlertDialog.Builder(this).create()
-                    val dialogBinding = ItemDialogReadMoreBinding.inflate(layoutInflater)
-
-                    dialog.setView(dialogBinding.root)
-                    dialog.setCancelable(true)
-                    dialog.show()
-
-                    dialogBinding.btnCancelDialogReadMore.setOnClickListener {
-                        dialog.dismiss()
-                    }
-
-                    dialogBinding.btnAcceptDialogReadMore.setOnClickListener {
-                        dialog.dismiss()
-                        showReadMoreDialog()
-                    }
+                    showReadMoreDialog()
                 }
 
             }
-
             true
         }
     }
 
     private fun showReadMoreDialog() {
         val dialog = androidx.appcompat.app.AlertDialog.Builder(this).create()
-        val redMoreBinding = ItemReadMoreDialogBinding.inflate(layoutInflater)
+        val readMoreBinding = ItemReadMoreDialogBinding.inflate(layoutInflater)
 
-        dialog.setView(redMoreBinding.root)
+        dialog.setView(readMoreBinding.root)
         dialog.setCancelable(true)
         dialog.show()
+
+        readMoreBinding.btnCancelDialogReadMore.setOnClickListener {
+            dialog.dismiss()
+        }
+        readMoreBinding.btnAcceptDialogReadMore.setOnClickListener {
+            dialog.dismiss()
+
+            openSelectedLibrary(readMoreBinding)
+        }
+
+    }
+
+    private fun openSelectedLibrary(readMoreBinding: ItemReadMoreDialogBinding) {
+
+        when (readMoreBinding.itemRadioGroupMainDialogRedMore.checkedRadioButtonId) {
+
+            R.id.item_radio_btn_amazon_dialogReadMore -> applicationContext.openWebsite("https://www.amazon.com/free-kids-books/s?k=free+kids+books")
+
+            R.id.item_radio_btn_npl_dialogReadMore -> applicationContext.openWebsite("https://www.nypl.org/")
+
+            R.id.item_radio_btn_oxfordOwl_dialogReadMore -> applicationContext.openWebsite("https://www.oxfordowl.co.uk/for-home/find-a-book/library-page/")
+
+            else -> Toast.makeText(applicationContext, "Something went Wrong!", Toast.LENGTH_SHORT)
+                .show()
+        }
 
     }
 

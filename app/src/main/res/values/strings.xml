@@ -33,8 +33,9 @@
     <string name="book_price">Book Price: %s</string>
     <string name="book_name">Book name</string>
     <string name="accept">Accept</string>
-    <string name="which_one_do_you_want">Which one do you want?</string>
+    <string name="go">Go</string>
+    <string name="our_suggestions">Our Suggestions</string>
     <string name="amazon_library">Amazon library</string>
     <string name="new_york_public_library">New York Public Library</string>
-    <string name="epic">Epic</string>
+    <string name="oxford_owl">Oxford Owl</string>
 </resources>

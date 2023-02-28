@@ -8,15 +8,15 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:padding="@dimen/space_8x">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/item_textShowSugg_dialoRedMore"
+            android:id="@+id/item_textShowSugg_dialogRedMore"
             style="@style/CoinBitText.Body.Bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/which_one_do_you_want"
+            android:text="@string/our_suggestions"
             app:layout_constraintBottom_toTopOf="@id/item_radio_group_main_dialogRedMore"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -27,9 +27,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/space_16x"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/linear_buttons_readMoreDialog"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/item_textShowSugg_dialoRedMore">
+            app:layout_constraintTop_toBottomOf="@+id/item_textShowSugg_dialogRedMore">
 
             <androidx.appcompat.widget.AppCompatRadioButton
                 android:id="@+id/item_radio_btn_amazon_dialogReadMore"
@@ -44,12 +44,41 @@
                 android:text="@string/new_york_public_library" />
 
             <androidx.appcompat.widget.AppCompatRadioButton
-                android:id="@+id/item_radio_btn_epic_dialogReadMore"
+                android:id="@+id/item_radio_btn_oxfordOwl_dialogReadMore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/epic" />
+                android:text="@string/oxford_owl" />
 
         </RadioGroup>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linear_buttons_readMoreDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16x"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_radio_group_main_dialogRedMore">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_accept_dialogReadMore"
+                style="@style/CoinBitText.Title.Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space_8x"
+                android:text="@string/go" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_cancel_dialogReadMore"
+                style="@style/CoinBitText.Title.Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_8x"
+                android:backgroundTint="@color/red_cancel"
+                android:text="@string/cancel" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
