@@ -23,26 +23,26 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_cancel_change"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_red_light"
+        android:backgroundTint="@color/red_cancel"
         android:text="@string/cancel"
-        android:textColor="@color/white"
+        style="@style/CoinBitText.Title.Light"
         android:layout_marginTop="@dimen/space_24x"
         app:layout_constraintEnd_toStartOf="@+id/btn_accept_change"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout_edt" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_accept_change"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:backgroundTint="?attr/colorPrimary"
         android:text="@string/yes"
-        android:textColor="@color/white"
+        style="@style/CoinBitText.Title.Light"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btn_cancel_change"

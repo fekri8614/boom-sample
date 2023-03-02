@@ -9,7 +9,9 @@
     android:layout_marginTop="@dimen/space_8x"
     android:layout_marginEnd="@dimen/space_8x"
     app:cardCornerRadius="@dimen/space_8x"
-    app:cardElevation="@dimen/space_4x">
+    app:cardElevation="0dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/grey_custom">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -64,7 +66,7 @@
             android:layout_marginTop="@dimen/space_4x"
             app:layout_constraintStart_toEndOf="@+id/materialCardView"
             app:layout_constraintTop_toBottomOf="@+id/txt_price_book_buy"
-            tools:text="Mohammad Reza Fekri" />
+            tools:text="Writer: Mohammad Reza Fekri" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/txt_published_date_book_buy"
@@ -75,7 +77,7 @@
             android:layout_marginTop="@dimen/space_4x"
             app:layout_constraintStart_toEndOf="@+id/materialCardView"
             app:layout_constraintTop_toBottomOf="@+id/txt_writer_book_buy"
-            tools:text="2035.02.10" />
+            tools:text="Published date: 2035.02.10" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
