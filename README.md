@@ -19,6 +19,7 @@ Boom is an application to read and search about books.
   * Androidx Components
   * Navigation Drawer / Bottom
   * Retrifit
+  * Room
   * SharedPrefrences
   * Glide
   * PdfViewer
