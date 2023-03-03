@@ -35,6 +35,7 @@ Boom is an application to read and search about books.
     plugins {
         ...
         id 'kotlin-parcelize'
+        id 'kotlin-kapt'
     }
     
     ...
@@ -55,6 +56,12 @@ Boom is an application to read and search about books.
         
         // Swipe-Refresh
         implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+        
+        // Room ->
+        def room_version = "2.5.0"
+        implementation "androidx.room:room-runtime:$room_version"
+        implementation "androidx.room:room-ktx:$room_version"
+        kapt "androidx.room:room-compiler:$room_version"
     
     }
   
@@ -81,8 +88,10 @@ Boom is an application to read and search about books.
     
     ...
 
+---
+
 ##### I will update more. Will update Restful-API ability
 
 ---
 
-I hope you enjoy :-)
+Happy codding..!!!😋😍😈
