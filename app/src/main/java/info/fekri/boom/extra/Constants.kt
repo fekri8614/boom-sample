@@ -8,3 +8,4 @@ const val API_KEY = "key=AIzaSyAZwZK79fPg2j0bHrGQfZ6vEcFFswC4pXs"
 
 // KEY -->
 const val KEY_SEND_DATA_BOOK_BUY = "send_buyData_to_BuyBookActivity"
+const val KEY_PUT_NAME_SHARED = "key_put_nameUser_sharedPreferences"

@@ -1,5 +1,6 @@
 package info.fekri.boom.ui.fragment
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
@@ -15,9 +16,11 @@ import info.fekri.boom.ui.activity.BuyBookActivity
 import info.fekri.boom.ux.adapter.BuyAdapter
 import info.fekri.boom.ux.adapter.BuyItemEvents
 import info.fekri.boom.ux.data.BuyBookData
+import info.fekri.boom.ux.room.MyDatabase
 
-class BuyFragment : Fragment(), BuyItemEvents {
+class BuyFragment(mContext: Context) : Fragment(), BuyItemEvents {
     private lateinit var binding: FragmentBuyBinding
+    private val buyBookDao = MyDatabase.getDatabase(mContext).buyBookDao
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -37,7 +40,7 @@ class BuyFragment : Fragment(), BuyItemEvents {
             }, 1500)
         }
 
-        val data = arrayListOf<BuyBookData>(
+        val data = listOf<BuyBookData>(
             BuyBookData(
                 urlPic = "https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg",
                 nameBook = "Nature is beautiful",
@@ -66,15 +69,12 @@ class BuyFragment : Fragment(), BuyItemEvents {
                 urlPdf = ""
             )
         )
-        val buyAdapter = BuyAdapter(data, this)
+        buyBookDao.insertAllBuy(data)
+
+        val buyAdapter = BuyAdapter(ArrayList(buyBookDao.getAllBuyBooks()), this)
         binding.layoutBuy.recyclerMain.adapter = buyAdapter
         binding.layoutBuy.recyclerMain.layoutManager =
             LinearLayoutManager(context, RecyclerView.VERTICAL, false)
-    }
-
-    // do nothing
-    override fun onBuyItemClicked(buyBookData: BuyBookData) {
-        // do nothing
     }
 
     // send data to BuyBookActivity -->
@@ -82,6 +82,9 @@ class BuyFragment : Fragment(), BuyItemEvents {
         val intent = Intent(activity, BuyBookActivity::class.java)
         intent.putExtra(KEY_SEND_DATA_BOOK_BUY, buyBookData)
         startActivity(intent)
+    }
+    override fun onBuyItemClicked(buyBookData: BuyBookData) {
+        // do nothing
     }
 
 }

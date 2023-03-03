@@ -8,10 +8,10 @@ import info.fekri.boom.ux.data.BuyBookData
 import info.fekri.boom.ux.data.MoreUiData
 import info.fekri.boom.ux.data.PoemsUiData
 import info.fekri.boom.ux.data.ScienceData
-import info.fekri.boom.ux.data.dao.BuyBookDao
-import info.fekri.boom.ux.data.dao.MoreDao
-import info.fekri.boom.ux.data.dao.PoemsDao
-import info.fekri.boom.ux.data.dao.ScienceDao
+import info.fekri.boom.ux.room.dao.BuyBookDao
+import info.fekri.boom.ux.room.dao.MoreDao
+import info.fekri.boom.ux.room.dao.PoemsDao
+import info.fekri.boom.ux.room.dao.ScienceDao
 
 @Database(entities = [ScienceData::class, PoemsUiData::class, MoreUiData::class, BuyBookData::class], version = 1, exportSchema = false)
 abstract class MyDatabase : RoomDatabase() {

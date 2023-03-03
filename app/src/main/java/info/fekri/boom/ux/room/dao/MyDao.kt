@@ -1,4 +1,4 @@
-package info.fekri.boom.ux.data.dao
+package info.fekri.boom.ux.room.dao
 
 import androidx.room.Dao
 import androidx.room.Insert

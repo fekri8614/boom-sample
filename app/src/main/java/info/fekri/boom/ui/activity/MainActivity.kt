@@ -146,7 +146,7 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.menu_home -> replaceFragment(HomeFragment(this))
 
-                R.id.menu_buy -> replaceFragment(BuyFragment())
+                R.id.menu_buy -> replaceFragment(BuyFragment(this))
 
             }
 
