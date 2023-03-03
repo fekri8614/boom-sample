@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun firstRun() {
-        replaceFragment(HomeFragment())
+        replaceFragment(HomeFragment(this))
         binding.bottomNavigationMain.selectedItemId = R.id.menu_home
     }
 
@@ -144,7 +144,7 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.menu_profile -> replaceFragment(ProfileFragment())
 
-                R.id.menu_home -> replaceFragment(HomeFragment())
+                R.id.menu_home -> replaceFragment(HomeFragment(this))
 
                 R.id.menu_buy -> replaceFragment(BuyFragment())
 

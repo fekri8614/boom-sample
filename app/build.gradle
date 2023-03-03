@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-parcelize'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -46,14 +47,14 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
-    // Glide - load images
+    // Glide - load images ->
     implementation 'com.github.bumptech.glide:glide:4.14.2'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
 
-    // Lottie - load animation
+    // Lottie - load animation ->
     implementation 'com.airbnb.android:lottie:6.0.0'
 
-    // PdfViewer
+    // PdfViewer ->
     implementation 'com.github.afreakyelf:Pdf-Viewer:v1.0.7'
 
     // Retrofit2 ->
@@ -61,6 +62,12 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:$retrofit2_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit2_version"
 
-    // Swipe-Refresh
+    // Swipe-Refresh ->
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+    // Room ->
+    def room_version = "2.5.0"
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
 }

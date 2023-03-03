@@ -39,31 +39,31 @@ class BuyFragment : Fragment(), BuyItemEvents {
 
         val data = arrayListOf<BuyBookData>(
             BuyBookData(
-                "https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg",
-                "Nature is beautiful",
-                "$12.9",
-                "Fekri",
-                "23.5.2",
-                arrayListOf("", "", ""),
-                ""
+                urlPic = "https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg",
+                nameBook = "Nature is beautiful",
+                priceBook = "$12.9",
+                writerBook = "Fekri",
+                publishedData = "23.5.2",
+                urlsBuy = "",
+                urlPdf = ""
             ),
             BuyBookData(
-                "https://www.worldatlas.com/r/w768/upload/06/b0/a6/swiss-alps-edler-von-rabenstein.jpg",
-                "Alps",
-                "$29.2",
-                "Fekri",
-                "22.3.2",
-                arrayListOf("", "", ""),
-                ""
+                urlPic = "https://www.worldatlas.com/r/w768/upload/06/b0/a6/swiss-alps-edler-von-rabenstein.jpg",
+                nameBook ="Alps",
+                priceBook ="$29.2",
+                writerBook = "Fekri",
+                publishedData = "22.3.2",
+                urlsBuy = "",
+                urlPdf = ""
             ),
             BuyBookData(
-                "https://cdn.britannica.com/84/73184-004-E5A450B5/Sunflower-field-Fargo-North-Dakota.jpg",
-                "Mind Flower",
-                "$200",
-                "Fekri",
-                "18.23.2",
-                arrayListOf("", "", ""),
-                ""
+                urlPic = "https://cdn.britannica.com/84/73184-004-E5A450B5/Sunflower-field-Fargo-North-Dakota.jpg",
+                nameBook ="Mind Flower",
+                priceBook = "$200",
+                writerBook = "Fekri",
+                publishedData = "18.23.2",
+                urlsBuy = "",
+                urlPdf = ""
             )
         )
         val buyAdapter = BuyAdapter(data, this)
@@ -72,9 +72,9 @@ class BuyFragment : Fragment(), BuyItemEvents {
             LinearLayoutManager(context, RecyclerView.VERTICAL, false)
     }
 
-    // show toast and suggest to click long on items -->
+    // do nothing
     override fun onBuyItemClicked(buyBookData: BuyBookData) {
-        // will do something
+        // do nothing
     }
 
     // send data to BuyBookActivity -->

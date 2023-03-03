@@ -29,8 +29,10 @@ class BuyAdapter(private val data: ArrayList<BuyBookData>, private val buyItemEv
 
             itemView.setOnLongClickListener {
                 buyItemEvents.onBuyItemLongClicked(itemBookData)
-                buyItemEvents.onBuyItemClicked(itemBookData)
                 true
+            }
+            itemView.setOnClickListener {
+                buyItemEvents.onBuyItemClicked(itemBookData)
             }
 
         }

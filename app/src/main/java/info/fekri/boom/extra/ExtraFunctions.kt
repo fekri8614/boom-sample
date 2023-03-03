@@ -24,4 +24,3 @@ fun Context.openWebsite(url: String) {
         )
     )
 }
-
