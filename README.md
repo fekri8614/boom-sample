@@ -20,7 +20,7 @@ Boom is an application to read and search about books.
   * Navigation Drawer / Bottom
   * Retrifit
   * Room
-  * SharedPrefrences
+  * SharedPreferences
   * Glide
   * PdfViewer
   * Swipe-Refresh
