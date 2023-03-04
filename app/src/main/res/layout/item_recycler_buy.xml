@@ -48,7 +48,7 @@
             tools:text="@string/book_name" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/txt_price_book_buy"
+            android:id="@+id/txt_lang_book_buy"
             style="@style/CoinBitText.BodyAlternate.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -56,18 +56,18 @@
             android:layout_marginTop="@dimen/space_4x"
             app:layout_constraintStart_toEndOf="@+id/materialCardView"
             app:layout_constraintTop_toBottomOf="@+id/txt_name_book_buy"
-            tools:text="Book Price: $10" />
+            tools:text="Language: eng" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/txt_writer_book_buy"
+            android:id="@+id/txt_publisher_book_buy"
             style="@style/CoinBitText.BodyAlternate.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/space_8x"
             android:layout_marginTop="@dimen/space_4x"
             app:layout_constraintStart_toEndOf="@+id/materialCardView"
-            app:layout_constraintTop_toBottomOf="@+id/txt_price_book_buy"
-            tools:text="Writer: Mohammad Reza Fekri" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_lang_book_buy"
+            tools:text="Publisher: Mohammad Reza Fekri" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/txt_published_date_book_buy"
@@ -77,7 +77,7 @@
             android:layout_marginStart="@dimen/space_8x"
             android:layout_marginTop="@dimen/space_4x"
             app:layout_constraintStart_toEndOf="@+id/materialCardView"
-            app:layout_constraintTop_toBottomOf="@+id/txt_writer_book_buy"
+            app:layout_constraintTop_toBottomOf="@+id/txt_publisher_book_buy"
             tools:text="Published date: 2035.02.10" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

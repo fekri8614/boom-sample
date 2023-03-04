@@ -1,6 +1,7 @@
 package info.fekri.boom.ux.adapter
 
 import info.fekri.boom.ux.data.*
+import info.fekri.boom.ux.retrofit.models.BuyBooksToUseData
 
 interface ScienceEvents {
 
@@ -23,7 +24,7 @@ interface PoemsUiEvents {
 // ---------------------------------------
 interface BuyItemEvents {
 
-    fun onBuyItemClicked(buyBookData: BuyBookData)
-    fun onBuyItemLongClicked(buyBookData: BuyBookData)
+    fun onBuyItemClicked(buyBookData: BuyBooksToUseData.Item)
+    fun onBuyItemLongClicked(buyBookData: BuyBooksToUseData.Item)
 
 }

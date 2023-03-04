@@ -41,11 +41,12 @@
     <string name="new_york_public_library">New York Public Library</string>
     <string name="oxford_owl">Oxford Owl</string>
     <string name="no_data_error">There is nothing to show!</string>
-    <string name="published_date">Published date:</string>
-    <string name="book_writer">Book writer:</string>
+    <string name="published_date">Published date</string>
+    <string name="book_publisher">Book Publisher</string>
     <string name="make_sure_buy">Let\'s make sure, that you really want to buy</string>
     <string name="i_m_sure_to_buy">I\'m sure to buy</string>
     <string name="i_want_to_buy">I just want to buy</string>
     <string name="i_want_to_read">I just want to read</string>
     <string name="developer_mohammad_reza_fekri">Developer: Mohammad-Reza Fekri</string>
+    <string name="language">Language:</string>
 </resources>

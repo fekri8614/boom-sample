@@ -103,15 +103,15 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/book_price" />
+                        android:text="@string/language" />
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/item_txt_show_bookPrice"
+                        android:id="@+id/item_txt_show_bookLang"
                         style="@style/CoinBitText.TitleAlternate"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        tools:text="$200" />
+                        tools:text="eng" />
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -127,10 +127,10 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/book_writer" />
+                        android:text="@string/book_publisher" />
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/item_txt_show_bookWriter"
+                        android:id="@+id/item_txt_show_bookPublisher"
                         style="@style/CoinBitText.TitleAlternate"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"

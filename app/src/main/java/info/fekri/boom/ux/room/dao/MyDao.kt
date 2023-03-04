@@ -3,7 +3,6 @@ package info.fekri.boom.ux.room.dao
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import info.fekri.boom.ux.data.BuyBookData
 import info.fekri.boom.ux.data.MoreUiData
 import info.fekri.boom.ux.data.PoemsUiData
 import info.fekri.boom.ux.data.ScienceData
@@ -38,17 +37,5 @@ interface MoreDao {
 
     @Query("select * from table_more")
     fun getAllMoreBooks(): List<MoreUiData>
-
-}
-
-// -------------------------------
-@Dao
-interface BuyBookDao {
-
-    @Insert
-    fun insertAllBuy(data: List<BuyBookData>)
-
-    @Query("select * from table_buy_books")
-    fun getAllBuyBooks(): List<BuyBookData>
 
 }

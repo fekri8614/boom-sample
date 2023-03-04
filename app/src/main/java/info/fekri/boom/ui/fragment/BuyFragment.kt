@@ -9,25 +9,23 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import info.fekri.boom.databinding.FragmentBuyBinding
 import info.fekri.boom.extra.KEY_SEND_DATA_BOOK_BUY
-import info.fekri.boom.extra.openWebsite
 import info.fekri.boom.ui.activity.BuyBookActivity
 import info.fekri.boom.ux.adapter.BuyAdapter
 import info.fekri.boom.ux.adapter.BuyItemEvents
-import info.fekri.boom.ux.data.BuyBookData
 import info.fekri.boom.ux.retrofit.ApiManager
+import info.fekri.boom.ux.retrofit.models.BuyBooksToUseData
 import info.fekri.boom.ux.room.MyDatabase
 
-class BuyFragment(private val mContext: Context) : Fragment(), BuyItemEvents {
+class BuyFragment() : Fragment(), BuyItemEvents {
     private lateinit var binding: FragmentBuyBinding
-    private val buyBookDao = MyDatabase.getDatabase(mContext).buyBookDao
     private val apiManager = ApiManager()
     private lateinit var dataNews: ArrayList<Pair<String, String>>
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -52,8 +50,24 @@ class BuyFragment(private val mContext: Context) : Fragment(), BuyItemEvents {
     }
 
     private fun initUi() {
-        initRecycler()
+        initApi()
+    }
+
+    private fun initApi() {
         getNewsFromApi()
+        getBooksDataFromApi()
+    }
+
+    private fun getBooksDataFromApi() {
+        apiManager.getBooksDataList(object : ApiManager.ApiCallback<List<BuyBooksToUseData.Item>> {
+            override fun onSuccess(data: List<BuyBooksToUseData.Item>) {
+                initRecycler(data)
+            }
+
+            override fun onError(errMsg: String) {
+                binding.layoutNews.txtNews.text = "Error: $errMsg"
+            }
+        })
     }
 
     private fun getNewsFromApi() {
@@ -93,52 +107,27 @@ class BuyFragment(private val mContext: Context) : Fragment(), BuyItemEvents {
 
     }
 
-    private fun initRecycler() {
-        val data = listOf<BuyBookData>(
-            BuyBookData(
-                urlPic = "https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg",
-                nameBook = "Nature is beautiful",
-                priceBook = "$12.9",
-                writerBook = "Fekri",
-                publishedData = "23.5.2",
-                urlsBuy = "",
-                urlPdf = ""
-            ),
-            BuyBookData(
-                urlPic = "https://www.worldatlas.com/r/w768/upload/06/b0/a6/swiss-alps-edler-von-rabenstein.jpg",
-                nameBook = "Alps",
-                priceBook = "$29.2",
-                writerBook = "Fekri",
-                publishedData = "22.3.2",
-                urlsBuy = "",
-                urlPdf = ""
-            ),
-            BuyBookData(
-                urlPic = "https://cdn.britannica.com/84/73184-004-E5A450B5/Sunflower-field-Fargo-North-Dakota.jpg",
-                nameBook = "Mind Flower",
-                priceBook = "$200",
-                writerBook = "Fekri",
-                publishedData = "18.23.2",
-                urlsBuy = "",
-                urlPdf = ""
-            )
-        )
-        buyBookDao.insertAllBuy(data)
+    private fun initRecycler(data: List<BuyBooksToUseData.Item>) {
 
-        val buyAdapter = BuyAdapter(ArrayList(buyBookDao.getAllBuyBooks()), this)
+        val buyAdapter = BuyAdapter(ArrayList(data), this)
+
         binding.layoutBuy.recyclerMain.adapter = buyAdapter
-        binding.layoutBuy.recyclerMain.layoutManager =
-            LinearLayoutManager(context, RecyclerView.VERTICAL, false)
+        binding.layoutBuy.recyclerMain.layoutManager = LinearLayoutManager(context)
+
     }
 
     // send data to BuyBookActivity -->
-    override fun onBuyItemLongClicked(buyBookData: BuyBookData) {
+    override fun onBuyItemLongClicked(buyBookData: BuyBooksToUseData.Item) {
+
         val intent = Intent(activity, BuyBookActivity::class.java)
+
         intent.putExtra(KEY_SEND_DATA_BOOK_BUY, buyBookData)
+
         startActivity(intent)
+
     }
 
-    override fun onBuyItemClicked(buyBookData: BuyBookData) {
+    override fun onBuyItemClicked(buyBookData: BuyBooksToUseData.Item) {
         // do nothing
     }
 

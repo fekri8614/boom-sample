@@ -12,6 +12,15 @@
     android:paddingTop="@dimen/space_4x"
     android:paddingEnd="@dimen/space_4x">
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtShowError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_data_error"
+        style="@style/CoinBitText.Title.Diff"
+        android:visibility="gone"
+        android:layout_gravity="center"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerMain"
         android:layout_width="match_parent"

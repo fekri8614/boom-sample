@@ -3,6 +3,7 @@ package info.fekri.boom.ux.retrofit
 import android.util.Log
 import info.fekri.boom.extra.BASE_URL
 import info.fekri.boom.ux.retrofit.models.BookNewsData
+import info.fekri.boom.ux.retrofit.models.BuyBooksToUseData
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -53,6 +54,27 @@ class ApiManager {
                 }
             })
 
+        } catch (e: Exception) {
+            Log.v("boomLog", e.message.toString())
+        }
+    }
+
+    fun getBooksDataList(apiCallback: ApiCallback<List<BuyBooksToUseData.Item>>) {
+        try {
+            apiService.getDataBooks().enqueue(object : Callback<BuyBooksToUseData>{
+                override fun onResponse(call: Call<BuyBooksToUseData>, response: Response<BuyBooksToUseData>) {
+                    val data = response.body()!!
+                    val dataToSend: List<BuyBooksToUseData.Item> = data.items
+
+                    // send dataToSend by apiCallback -->
+                    apiCallback.onSuccess(dataToSend)
+                }
+
+                override fun onFailure(call: Call<BuyBooksToUseData>, t: Throwable) {
+                    val msg = t.message!!
+                    apiCallback.onError(msg)
+                }
+            })
         } catch (e: Exception) {
             Log.v("boomLog", e.message.toString())
         }

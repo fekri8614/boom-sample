@@ -4,12 +4,11 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.AppCompatImageView
 import com.bumptech.glide.Glide
 import info.fekri.boom.R
 import info.fekri.boom.databinding.ActivityBuyBookBinding
 import info.fekri.boom.extra.KEY_SEND_DATA_BOOK_BUY
-import info.fekri.boom.ux.data.BuyBookData
+import info.fekri.boom.ux.retrofit.models.BuyBooksToUseData
 
 class BuyBookActivity : AppCompatActivity() {
     private lateinit var binding: ActivityBuyBookBinding
@@ -24,11 +23,10 @@ class BuyBookActivity : AppCompatActivity() {
     }
     override fun onStart() {
         super.onStart()
-        val dataSend = intent.getParcelableExtra<BuyBookData>(KEY_SEND_DATA_BOOK_BUY)
+        val dataSend = intent.getParcelableExtra<BuyBooksToUseData.Item>(KEY_SEND_DATA_BOOK_BUY)
 
         if (dataSend != null) {
             uiShow(dataSend)
-
         } else {
             // visible the error text -->
             binding.txtShowError.visibility = View.VISIBLE
@@ -41,19 +39,8 @@ class BuyBookActivity : AppCompatActivity() {
 
     }
 
-    private fun uiShow(dataSend: BuyBookData) {
-        binding.collapsingMain.title = dataSend.nameBook
+    private fun uiShow(dataSend: BuyBooksToUseData.Item) {
 
-        Glide
-            .with(this)
-            .load(dataSend.urlPic)
-            .error(R.drawable.broken_img)
-            .into(binding.imgFlagBuy)
-
-        binding.itemTxtShowBookName.text = dataSend.nameBook
-        binding.itemTxtShowBookPrice.text = dataSend.priceBook
-        binding.itemTxtShowBookWriter.text = dataSend.writerBook
-        binding.itemTxtShowBookPublishedDate.text = dataSend.publishedData
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == android.R.id.home) onBackPressed()
