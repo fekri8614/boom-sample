@@ -10,14 +10,15 @@
     android:layout_marginEnd="@dimen/space_14x"
     android:paddingStart="@dimen/space_4x"
     android:paddingTop="@dimen/space_4x"
-    android:paddingEnd="@dimen/space_4x"
-    android:paddingBottom="@dimen/space_4x">
+    android:paddingEnd="@dimen/space_4x">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerMain"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:itemCount="15"
-        tools:listitem="@layout/item_recycler_buy" />
+        android:layoutAnimation="@anim/recycler"
+        tools:listitem="@layout/item_recycler_buy"
+        android:paddingBottom="@dimen/space_8x"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

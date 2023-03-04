@@ -125,11 +125,11 @@ class MainActivity : AppCompatActivity() {
 
         when (readMoreBinding.itemRadioGroupMainDialogRedMore.checkedRadioButtonId) {
 
-            R.id.item_radio_btn_amazon_dialogReadMore -> applicationContext.openWebsite("https://www.amazon.com/free-kids-books/s?k=free+kids+books")
+            R.id.item_radio_btn_amazon_dialogReadMore -> openWebsite("https://www.amazon.com/free-kids-books/s?k=free+kids+books")
 
-            R.id.item_radio_btn_npl_dialogReadMore -> applicationContext.openWebsite("https://www.nypl.org/")
+            R.id.item_radio_btn_npl_dialogReadMore -> openWebsite("https://www.nypl.org/")
 
-            R.id.item_radio_btn_oxfordOwl_dialogReadMore -> applicationContext.openWebsite("https://www.oxfordowl.co.uk/for-home/find-a-book/library-page/")
+            R.id.item_radio_btn_oxfordOwl_dialogReadMore -> openWebsite("https://www.oxfordowl.co.uk/for-home/find-a-book/library-page/")
 
             else -> Toast.makeText(applicationContext, "Something went Wrong!", Toast.LENGTH_SHORT)
                 .show()
