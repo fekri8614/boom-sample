@@ -78,7 +78,6 @@ class BuyFragment() : Fragment(), BuyItemEvents {
             Log.v("boomLog", e.message.toString())
         }
 
-
     }
 
 
