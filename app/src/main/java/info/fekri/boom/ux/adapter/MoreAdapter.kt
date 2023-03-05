@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import info.fekri.boom.R
 import info.fekri.boom.databinding.ItemRecyclerHomeBinding
+import info.fekri.boom.extra.MoreUiEvents
 import info.fekri.boom.ux.data.MoreUiData
 
 class MoreAdapter(private val data: ArrayList<MoreUiData>, private val itemEvents: MoreUiEvents) :

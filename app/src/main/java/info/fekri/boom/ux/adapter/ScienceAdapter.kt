@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import info.fekri.boom.R
 import info.fekri.boom.databinding.ItemRecyclerHomeBinding
+import info.fekri.boom.extra.ScienceEvents
 import info.fekri.boom.ux.data.ScienceData
 
 class ScienceAdapter(private val data: ArrayList<ScienceData>, private val itemEvents: ScienceEvents) :

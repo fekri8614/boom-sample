@@ -1,9 +1,9 @@
 package info.fekri.boom.ux.retrofit
 
+
 import android.util.Log
 import info.fekri.boom.extra.BASE_URL
-import info.fekri.boom.ux.retrofit.models.BookNewsData
-import info.fekri.boom.ux.retrofit.models.BuyBooksToUseData
+import info.fekri.boom.ux.retrofit.models.BestBookKTData
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -12,6 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class ApiManager {
     private val apiService: ApiService
+    private lateinit var dataVolumeInfo: BestBookKTData.Item.VolumeInfo
 
     init {
         val retrofit = Retrofit
@@ -23,61 +24,49 @@ class ApiManager {
         apiService = retrofit.create(ApiService::class.java)
     }
 
-    fun getNews(apiCallback: ApiCallback<ArrayList<Pair<String, String>>>) {
-        try {
-            apiService.getNews().enqueue(object : Callback<BookNewsData> {
-                override fun onResponse(call: Call<BookNewsData>, response: Response<BookNewsData>) {
-                    val data = response.body()!!
-                    val dataToSend: ArrayList<Pair<String, String>> = arrayListOf()
+    fun getBooksData(apiCallback: ApiCallback<List<BestBookKTData.Item.VolumeInfo>>) {
 
-                    data.items.forEach {
-                        try {
-                            dataToSend.add(
-                                Pair(
-                                    it.volumeInfo.title,
-                                    it.volumeInfo.infoLink
-                                )
-                            )
-                        } catch (e: Exception) {
-                            Log.v("boomLog", e.message.toString())
+        try {
+
+            apiService.getShowBooksData().enqueue(object : Callback<BestBookKTData> {
+
+                override fun onResponse(
+                    call: Call<BestBookKTData>,
+                    response: Response<BestBookKTData>
+                ) {
+
+                    try {
+
+                        val data = response.body()
+
+                        if (data != null) {
+                            data.items.forEach {
+                                val volumeInfo = it.volumeInfo
+                                dataVolumeInfo = volumeInfo
+                            }
+
+                            val dataToSend: List<BestBookKTData.Item.VolumeInfo> =
+                                listOf(dataVolumeInfo)
+                            apiCallback.onSuccess(dataToSend)
                         }
 
+                    } catch (e: Exception) {
+                        Log.v("boomLog", e.message.toString())
                     }
 
-                    // send data by apiCallback
-                    apiCallback.onSuccess(dataToSend)
                 }
 
-                override fun onFailure(call: Call<BookNewsData>, t: Throwable) {
+                override fun onFailure(call: Call<BestBookKTData>, t: Throwable) {
                     val message = t.message!!
                     apiCallback.onError(message)
                 }
+
             })
 
         } catch (e: Exception) {
             Log.v("boomLog", e.message.toString())
         }
-    }
 
-    fun getBooksDataList(apiCallback: ApiCallback<List<BuyBooksToUseData.Item>>) {
-        try {
-            apiService.getDataBooks().enqueue(object : Callback<BuyBooksToUseData>{
-                override fun onResponse(call: Call<BuyBooksToUseData>, response: Response<BuyBooksToUseData>) {
-                    val data = response.body()!!
-                    val dataToSend: List<BuyBooksToUseData.Item> = data.items
-
-                    // send dataToSend by apiCallback -->
-                    apiCallback.onSuccess(dataToSend)
-                }
-
-                override fun onFailure(call: Call<BuyBooksToUseData>, t: Throwable) {
-                    val msg = t.message!!
-                    apiCallback.onError(msg)
-                }
-            })
-        } catch (e: Exception) {
-            Log.v("boomLog", e.message.toString())
-        }
     }
 
     interface ApiCallback<T> {

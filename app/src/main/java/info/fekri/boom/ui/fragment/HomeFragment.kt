@@ -10,13 +10,17 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.rajat.pdfviewer.PdfViewerActivity
 import info.fekri.boom.databinding.FragmentHomeBinding
+import info.fekri.boom.extra.MoreUiEvents
+import info.fekri.boom.extra.PoemsUiEvents
+import info.fekri.boom.extra.ScienceEvents
 import info.fekri.boom.ux.adapter.*
 import info.fekri.boom.ux.data.MoreUiData
 import info.fekri.boom.ux.data.PoemsUiData
 import info.fekri.boom.ux.data.ScienceData
 import info.fekri.boom.ux.room.MyDatabase
 
-class HomeFragment(private val mContext: Context) : Fragment(), ScienceEvents, MoreUiEvents, PoemsUiEvents {
+class HomeFragment(private val mContext: Context) : Fragment(), ScienceEvents, MoreUiEvents,
+    PoemsUiEvents {
     private lateinit var binding: FragmentHomeBinding
     private val scienceDao = MyDatabase.getDatabase(mContext).scienceDao
     private val poemsDao   = MyDatabase.getDatabase(mContext).poemsDao

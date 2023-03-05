@@ -6,7 +6,7 @@ import kotlinx.parcelize.Parcelize
 import android.os.Parcelable
 
 @Parcelize
-data class BookNewsData(
+data class BestBookKTData(
     @SerializedName("items")
     val items: List<Item>,
     @SerializedName("kind")
@@ -58,12 +58,16 @@ data class BookNewsData(
         ) : Parcelable {
             @Parcelize
             data class Epub(
+                @SerializedName("acsTokenLink")
+                val acsTokenLink: String,
                 @SerializedName("isAvailable")
                 val isAvailable: Boolean
             ) : Parcelable
 
             @Parcelize
             data class Pdf(
+                @SerializedName("acsTokenLink")
+                val acsTokenLink: String,
                 @SerializedName("isAvailable")
                 val isAvailable: Boolean
             ) : Parcelable
@@ -92,7 +96,7 @@ data class BookNewsData(
             @SerializedName("authors")
             val authors: List<String>,
             @SerializedName("averageRating")
-            val averageRating: Double,
+            val averageRating: Int,
             @SerializedName("canonicalVolumeLink")
             val canonicalVolumeLink: String,
             @SerializedName("categories")
