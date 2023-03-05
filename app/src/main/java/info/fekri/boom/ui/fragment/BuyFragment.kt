@@ -65,12 +65,19 @@ class BuyFragment() : Fragment(), BuyItemEvents {
 
     private fun setRecyclerView(data: List<BestBookKTData.Item.VolumeInfo>) {
 
-        val dataAdapter = ArrayList(data)
+        try {
 
-        val buyAdapter = BuyAdapter(dataAdapter, this)
-        binding.itemModuleMainBuy.recyclerMain.adapter = buyAdapter
-        binding.itemModuleMainBuy.recyclerMain.layoutManager =
-            LinearLayoutManager(requireContext(), RecyclerView.VERTICAL, false)
+            val dataAdapter = ArrayList(data)
+
+            val buyAdapter = BuyAdapter(dataAdapter, this)
+            binding.itemModuleMainBuy.recyclerMain.adapter = buyAdapter
+            binding.itemModuleMainBuy.recyclerMain.layoutManager =
+                LinearLayoutManager(requireContext(), RecyclerView.VERTICAL, false)
+
+        } catch (e: Exception) {
+            Log.v("boomLog", e.message.toString())
+        }
+
 
     }
 
