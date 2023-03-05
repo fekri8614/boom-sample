@@ -20,7 +20,7 @@ interface PoemsUiEvents {
     fun onPoemsUiItemLongClicked(book: PoemsUiData)
 }
 
-// ---------------------------------------
+// --------------- BUY ------------------------
 interface BuyItemEvents {
     fun onBuyItemClicked(data: BestBookKTData.Item.VolumeInfo)
 

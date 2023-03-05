@@ -67,11 +67,11 @@ class BuyFragment() : Fragment(), BuyItemEvents {
     // ---------------------------------------------------------------------------
 
     override fun onBuyItemClicked(data: BestBookKTData.Item.VolumeInfo) {
-
+        // do nothing
     }
 
     override fun onBuyItemLongClicked(data: BestBookKTData.Item.VolumeInfo) {
-
+        // go to BuyBookActivity
     }
 
 }
