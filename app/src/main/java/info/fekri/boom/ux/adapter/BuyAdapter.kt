@@ -1,5 +1,6 @@
 package info.fekri.boom.ux.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,24 +21,28 @@ class BuyAdapter(
     inner class BuyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bindViews(data: BestBookKTData.Item.VolumeInfo) {
 
-            binding.txtNameBookBuy.text = data.title
-            binding.txtLangBookBuy.text = data.language
-            binding.txtPublisherBookBuy.text = data.publisher
-            binding.txtPublishedDateBookBuy.text = data.publishedDate
+            try {
+                binding.txtNameBookBuy.text = data.title
+                binding.txtLangBookBuy.text = data.language
+                binding.txtPublisherBookBuy.text = data.publisher
+                binding.txtPublishedDateBookBuy.text = data.publishedDate
 
-            Glide
-                .with(itemView)
-                .load(data.imageLinks.thumbnail)
-                .error(R.drawable.broken_img)
-                .into(binding.itemImgCoverBuy)
+                Glide
+                    .with(itemView)
+                    .load(data.imageLinks.thumbnail)
+                    .error(R.drawable.broken_img)
+                    .into(binding.itemImgCoverBuy)
 
-            // click-listener monitoring -->
-            itemView.setOnLongClickListener {
-                buyItemEvents.onBuyItemLongClicked(data)
-                true
-            }
-            itemView.setOnClickListener {
-                buyItemEvents.onBuyItemClicked(data)
+                // click-listener monitoring -->
+                itemView.setOnLongClickListener {
+                    buyItemEvents.onBuyItemLongClicked(data)
+                    true
+                }
+                itemView.setOnClickListener {
+                    buyItemEvents.onBuyItemClicked(data)
+                }
+            } catch (e: Exception) {
+                Log.v("boomLog", e.message.toString())
             }
 
         }

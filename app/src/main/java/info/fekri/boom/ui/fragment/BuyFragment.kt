@@ -39,10 +39,20 @@ class BuyFragment() : Fragment(), BuyItemEvents {
     }
 
     private fun getBooksDataFromApi() {
+
         apiManager.getBooksData(object :
             ApiManager.ApiCallback<List<BestBookKTData.Item.VolumeInfo>> {
+
             override fun onSuccess(data: List<BestBookKTData.Item.VolumeInfo>) {
-                setRecyclerView(data)
+
+                try {
+                    // set recycler
+                    setRecyclerView(data)
+
+                } catch (e: Exception) {
+                    Log.v("boomLog", e.message.toString())
+                }
+
             }
 
             override fun onError(errMsg: String) {
@@ -50,6 +60,7 @@ class BuyFragment() : Fragment(), BuyItemEvents {
                 binding.itemModuleMainBuy.txtSHowError.visibility = View.VISIBLE
             }
         })
+
     }
 
     private fun setRecyclerView(data: List<BestBookKTData.Item.VolumeInfo>) {
