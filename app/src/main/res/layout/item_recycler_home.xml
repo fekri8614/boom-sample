@@ -26,14 +26,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/title"
-            style="@style/CoinBitText.BodyTertiary.Light"/>
+            style="@style/CoinBitText.BodyTertiary.Brown"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/desc_recycler_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sample_desc"
-            style="@style/CoinBitText.Title.Light"
+            style="@style/CoinBitText.Title.Borwn"
             android:ellipsize="end"
             android:lineSpacingExtra="6dp"
             android:maxLines="1"

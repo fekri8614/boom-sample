@@ -1,7 +1,7 @@
 package info.fekri.boom.extra
 
 import info.fekri.boom.ux.data.*
-import info.fekri.boom.ux.retrofit.models.BestBookKTData
+import info.fekri.boom.ux.retrofit.models.HeroesData
 
 interface ScienceEvents {
 
@@ -21,8 +21,8 @@ interface PoemsUiEvents {
 }
 
 // --------------- BUY ------------------------
-interface BuyItemEvents {
-    fun onBuyItemClicked(data: BestBookKTData.Item.VolumeInfo)
+interface HeroesEvent {
+    fun onHeroesItemClicked(data: HeroesData.HeroesDataItem)
 
-    fun onBuyItemLongClicked(data: BestBookKTData.Item.VolumeInfo)
+    fun onHeroesItemLongClicked(data: HeroesData.HeroesDataItem)
 }

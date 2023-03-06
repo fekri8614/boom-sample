@@ -18,6 +18,9 @@ import info.fekri.boom.ux.data.MoreUiData
 import info.fekri.boom.ux.data.PoemsUiData
 import info.fekri.boom.ux.data.ScienceData
 import info.fekri.boom.ux.room.MyDatabase
+import info.fekri.boom.ux.adapter.MoreAdapter
+import info.fekri.boom.ux.adapter.PoemsAdapter
+import info.fekri.boom.ux.adapter.ScienceAdapter
 
 class HomeFragment(private val mContext: Context) : Fragment(), ScienceEvents, MoreUiEvents,
     PoemsUiEvents {

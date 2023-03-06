@@ -71,6 +71,11 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+    <style name="CoinBitText.Title.Borwn" parent="CoinBitText">
+        <item name="android:textColor">@color/brown_custom</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
     <style name="CoinBitText.TitleAlternate" parent="CoinBitText">
         <item name="android:textColor">@color/secondaryTextColor</item>
         <item name="android:textSize">14sp</item>
@@ -104,6 +109,12 @@
 
     <style name="CoinBitText.BodyTertiary.Light" parent="CoinBitText">
         <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="CoinBitText.BodyTertiary.Brown" parent="CoinBitText">
+        <item name="android:textColor">@color/brown_custom</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">20sp</item>
     </style>

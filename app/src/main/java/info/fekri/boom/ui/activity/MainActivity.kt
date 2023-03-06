@@ -6,23 +6,18 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
-import com.google.android.material.snackbar.Snackbar
 import info.fekri.boom.R
 import info.fekri.boom.databinding.ActivityMainBinding
-import info.fekri.boom.databinding.ItemDialogReadMoreBinding
 import info.fekri.boom.databinding.ItemDialogShowWelcomeBinding
 import info.fekri.boom.databinding.ItemReadMoreDialogBinding
 import info.fekri.boom.extra.openWebsite
 import info.fekri.boom.ui.fragment.HomeFragment
 import info.fekri.boom.ui.fragment.ProfileFragment
-import info.fekri.boom.ui.fragment.BuyFragment
+import info.fekri.boom.ui.fragment.HeroesFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -55,6 +50,8 @@ class MainActivity : AppCompatActivity() {
             dialog.setView(dialogWelcomeBinding.root)
             dialog.setCancelable(true)
             dialog.show()
+
+            dialogWelcomeBinding.btnGoWelcome.setOnClickListener { dialog.dismiss() }
 
             shared.edit().putBoolean("isFirst", false).apply()
         }
@@ -146,7 +143,7 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.menu_home -> replaceFragment(HomeFragment(this))
 
-                R.id.menu_buy -> replaceFragment(BuyFragment())
+                R.id.menu_heroes -> replaceFragment(HeroesFragment())
 
             }
 

@@ -19,7 +19,7 @@
 
         <activity
             android:exported="false"
-            android:name=".ui.activity.BuyBookActivity"/>
+            android:name=".ui.activity.ShowHeroesActivity"/>
 
         <activity
             android:name=".ui.activity.SplashScreenActivity"
