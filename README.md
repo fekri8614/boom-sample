@@ -99,4 +99,10 @@ Boom is an application to read and search about books.
 
 ---
 
-Happy codding..!!!😋😍😈
+Also, I got help from [GeeksforGeeks](https://www.geeksforgeeks.org/)
+
+### [Android - Build a Book Library App using Kotlin - GeeksforGeeks](https://www.geeksforgeeks.org/android-build-a-book-library-app-using-kotlin/)
+
+---
+
+I really enjoyrd at this project!! I hope you will enjoy too!😍😝
