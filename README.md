@@ -105,4 +105,4 @@ Also, I got help from [GeeksforGeeks](https://www.geeksforgeeks.org/)
 
 ---
 
-I really enjoyrd at this project!! I hope you will enjoy too!😍😝
+I really enjoyrd this project!! I hope you will enjoy too!😍😝
