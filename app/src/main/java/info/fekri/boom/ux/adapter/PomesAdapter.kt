@@ -20,8 +20,6 @@ class PoemsAdapter(
     inner class PoemsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bindViews(itemBook: PoemsUiData) {
 
-            binding.titleRecyclerHome.text = itemBook.title
-            binding.descRecyclerHome.text = itemBook.desc
             Glide
                 .with(itemView.context)
                 .load(itemBook.coverImageUrl)

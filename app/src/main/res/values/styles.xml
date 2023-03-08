@@ -47,6 +47,7 @@
 
     <style name="CoinBitText.Caption" parent="CoinBitText">
         <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:textSize">12sp</item>
     </style>
 

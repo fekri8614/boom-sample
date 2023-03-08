@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".ui.activity.ShowHeroesActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -41,6 +41,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/back_search"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -106,10 +107,10 @@
                         android:text="@string/aliases" />
 
                     <HorizontalScrollView
-                        android:layout_weight="1"
-                        android:scrollbars="none"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:scrollbars="none">
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:id="@+id/item_txt_show_heroAlias"
@@ -147,12 +148,12 @@
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <View
+                    android:layout_width="200dp"
+                    android:layout_height="2dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="@dimen/space_10x"
                     android:layout_marginBottom="@dimen/space_10x"
-                    android:layout_width="200dp"
-                    android:layout_height="2dp"
-                    android:background="@color/grey_custom"/>
+                    android:background="@color/grey_custom" />
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
@@ -254,8 +255,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="2dp"
-                    android:orientation="horizontal"
                     android:gravity="center"
+                    android:orientation="horizontal"
                     android:weightSum="2">
 
                     <androidx.appcompat.widget.AppCompatTextView
@@ -266,10 +267,10 @@
                         android:text="@string/relation" />
 
                     <HorizontalScrollView
-                        android:scrollbars="none"
-                        android:layout_weight="1"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:scrollbars="none">
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:id="@+id/item_txt_showRelation"
@@ -283,19 +284,19 @@
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <View
+                    android:layout_width="200dp"
+                    android:layout_height="2dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="@dimen/space_10x"
                     android:layout_marginBottom="@dimen/space_10x"
-                    android:layout_width="200dp"
-                    android:layout_height="2dp"
-                    android:background="@color/grey_custom"/>
+                    android:background="@color/grey_custom" />
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="2dp"
-                    android:orientation="horizontal"
                     android:gravity="center"
+                    android:orientation="horizontal"
                     android:weightSum="2">
 
                     <androidx.appcompat.widget.AppCompatTextView
@@ -306,10 +307,10 @@
                         android:text="@string/powers" />
 
                     <HorizontalScrollView
-                        android:scrollbars="none"
-                        android:layout_weight="1"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:scrollbars="none">
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:id="@+id/item_txt_showPowers"
@@ -326,8 +327,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="2dp"
-                    android:orientation="horizontal"
                     android:gravity="center"
+                    android:orientation="horizontal"
                     android:weightSum="2">
 
                     <androidx.appcompat.widget.AppCompatTextView
@@ -338,10 +339,10 @@
                         android:text="@string/appearance" />
 
                     <HorizontalScrollView
-                        android:scrollbars="none"
-                        android:layout_weight="1"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:scrollbars="none">
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:id="@+id/item_txt_showAppearance"

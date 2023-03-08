@@ -18,9 +18,6 @@ class MoreAdapter(private val data: ArrayList<MoreUiData>, private val itemEvent
 
         fun bindViews(itemBook: MoreUiData) {
 
-            binding.titleRecyclerHome.text = itemBook.title
-            binding.descRecyclerHome.text = itemBook.desc
-
             Glide
                 .with(itemView.context)
                 .load(itemBook.coverImageUrl)

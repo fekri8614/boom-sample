@@ -17,9 +17,6 @@ class ScienceAdapter(private val data: ArrayList<ScienceData>, private val itemE
     inner class ScienceViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bindViews(itemBook: ScienceData) {
 
-            binding.titleRecyclerHome.text = itemBook.title
-            binding.descRecyclerHome.text = itemBook.desc
-
             Glide
                 .with(itemView.context)
                 .load(itemBook.coverImageUrl)

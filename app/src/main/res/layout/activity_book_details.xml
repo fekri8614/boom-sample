@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.BookDetailsActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/idIVBook"
+                android:layout_width="130dp"
+                android:layout_height="160dp"
+                android:layout_margin="@dimen/space_16x" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_20x"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/idTVPublisher"
+                    style="@style/CoinBitText.TitleAlternate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/space_4x"
+                    android:text="@string/publisher" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/idTVNoOfPages"
+                    style="@style/CoinBitText.TitleAlternate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_4x"
+                    android:padding="@dimen/space_4x"
+                    android:text="@string/book_pages" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/idTVPublishDate"
+                    style="@style/CoinBitText.TitleAlternate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_4x"
+                    android:padding="@dimen/space_4x"
+                    android:text="@string/published_date" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/idTVTitle"
+            style="@style/CoinBitText.TitleAlternate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_8x"
+            android:padding="@dimen/space_4x"
+            android:text="@string/title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/idTVSubTitle"
+            style="@style/CoinBitText.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_8x"
+            android:padding="@dimen/space_4x"
+            android:text="@string/sub_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/idTVDescription"
+            style="@style/CoinBitText.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_8x"
+            android:padding="@dimen/space_4x"
+            android:text="@string/description" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_8x"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/idBtnBuy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_4x"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:text="@string/buy"
+                android:textAllCaps="false" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/idBtnPreview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_4x"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:text="@string/preview"
+                android:textAllCaps="false" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.core.widget.NestedScrollView>

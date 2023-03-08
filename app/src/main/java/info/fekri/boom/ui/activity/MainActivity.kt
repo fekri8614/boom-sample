@@ -15,6 +15,7 @@ import info.fekri.boom.databinding.ActivityMainBinding
 import info.fekri.boom.databinding.ItemDialogShowWelcomeBinding
 import info.fekri.boom.databinding.ItemReadMoreDialogBinding
 import info.fekri.boom.extra.openWebsite
+import info.fekri.boom.ui.fragment.BooksFragment
 import info.fekri.boom.ui.fragment.HomeFragment
 import info.fekri.boom.ui.fragment.ProfileFragment
 import info.fekri.boom.ui.fragment.HeroesFragment
@@ -94,6 +95,13 @@ class MainActivity : AppCompatActivity() {
                     showReadMoreDialog()
                 }
 
+                R.id.menu_heroes -> {
+                    binding.draweLayoutMain.closeDrawer(GravityCompat.START)
+
+                    // replace fragment -->
+                    replaceFragment(HeroesFragment())
+                }
+
             }
             true
         }
@@ -143,7 +151,7 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.menu_home -> replaceFragment(HomeFragment(this))
 
-                R.id.menu_heroes -> replaceFragment(HeroesFragment())
+                R.id.menu_books -> replaceFragment(BooksFragment())
 
             }
 

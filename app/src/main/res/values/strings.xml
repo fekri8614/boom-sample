@@ -13,7 +13,7 @@
     <string name="science">Science</string>
     <string name="philosophy">Philosophy</string>
     <string name="story">Story</string>
-    <string name="search_message">Search in googleBooks…</string>
+    <string name="search_message">Search books…</string>
     <string name="name">Name</string>
     <string name="sample_name">Sample Name</string>
     <string name="delete_message">Are you sure?</string>
@@ -59,4 +59,10 @@
     <string name="powers">Powers</string>
     <string name="book_name">Book name</string>
     <string name="appearance">Appearance</string>
+    <string name="books">books</string>
+    <string name="book_pages">Book Pages</string>
+    <string name="sub_title">Subtitle</string>
+    <string name="description">Description</string>
+    <string name="buy">Buy</string>
+    <string name="preview">Preview</string>
 </resources>
