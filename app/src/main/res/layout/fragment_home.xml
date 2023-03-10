@@ -11,144 +11,14 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="bottom"
+        android:gravity="center"
         android:orientation="vertical">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/space_8x"
-            android:backgroundTint="@color/yellow_back"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/sample" />
-
-        </androidx.cardview.widget.CardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:layout_marginEnd="@dimen/space_8x"
-            android:layout_marginStart="@dimen/space_8x"
-            app:cardCornerRadius="@dimen/space_8x"
-            app:cardElevation="@dimen/space_4x"
-            android:layout_marginBottom="@dimen/space_8x"
-            android:layout_marginTop="@dimen/space_8x">
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="@dimen/space_8x">
-
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:id="@+id/pack1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/space_4x"
-                    android:layout_marginTop="@dimen/space_8x"
-                    android:orientation="vertical"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/txt_title1"
-                        style="@style/CoinBitText.Body2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/science" />
-
-                    <HorizontalScrollView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:scrollbars="none">
-
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/recycer_science"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layoutAnimation="@anim/recycler"
-                            tools:itemCount="1"
-                            tools:listitem="@layout/item_recycler_home" />
-
-                    </HorizontalScrollView>
-
-                </androidx.appcompat.widget.LinearLayoutCompat>
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:id="@+id/pack2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/space_4x"
-                    android:layout_marginTop="@dimen/space_8x"
-                    android:orientation="vertical"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/txt_title2"
-                        style="@style/CoinBitText.Body2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/more" />
-
-                    <HorizontalScrollView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:scrollbars="none">
-
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/recycler_history"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layoutAnimation="@anim/recycler"
-                            tools:itemCount="1"
-                            tools:listitem="@layout/item_recycler_home" />
-
-                    </HorizontalScrollView>
-
-                </androidx.appcompat.widget.LinearLayoutCompat>
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:id="@+id/pack3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/space_4x"
-                    android:layout_marginTop="@dimen/space_8x"
-                    android:orientation="vertical"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/txt_title3"
-                        style="@style/CoinBitText.Body2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/story" />
-
-                    <HorizontalScrollView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:scrollbars="none">
-
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/recycler_philosophy"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layoutAnimation="@anim/recycler"
-                            tools:itemCount="1"
-                            tools:listitem="@layout/item_recycler_home" />
-
-                    </HorizontalScrollView>
-
-                </androidx.appcompat.widget.LinearLayoutCompat>
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
-        </com.google.android.material.card.MaterialCardView>
+            android:text="Home :-))))"
+            android:layout_gravity="center"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

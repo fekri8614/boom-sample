@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun firstRun() {
-        replaceFragment(HomeFragment(this))
+        replaceFragment(HomeFragment())
         binding.bottomNavigationMain.selectedItemId = R.id.menu_home
     }
 
@@ -97,6 +97,7 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.menu_heroes -> {
                     binding.draweLayoutMain.closeDrawer(GravityCompat.START)
+                    binding.bottomNavigationMain.isSelected = false
 
                     // replace fragment -->
                     replaceFragment(HeroesFragment())
@@ -147,9 +148,9 @@ class MainActivity : AppCompatActivity() {
 
             when (it.itemId) {
 
-                R.id.menu_profile -> replaceFragment(ProfileFragment())
+                R.id.menu_profile -> replaceFragment(ProfileFragment(this))
 
-                R.id.menu_home -> replaceFragment(HomeFragment(this))
+                R.id.menu_home -> replaceFragment(HomeFragment())
 
                 R.id.menu_books -> replaceFragment(BooksFragment())
 

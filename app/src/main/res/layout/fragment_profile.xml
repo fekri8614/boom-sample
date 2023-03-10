@@ -5,73 +5,255 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/background_main"
     tools:context=".ui.fragment.ProfileFragment">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="@dimen/space_8x">
 
-        <com.google.android.material.card.MaterialCardView
+        <HorizontalScrollView
+            android:layout_marginTop="@dimen/space_20x"
+            android:id="@+id/nested_profPack_profile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/space_8x"
-            app:cardCornerRadius="@dimen/space_8x"
-            app:strokeColor="@color/grey_custom"
-            app:strokeWidth="2dp">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:scrollbars="none">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|end"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/space_4x">
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/img_cover_user"
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="@dimen/space_16x"
+                    android:elevation="2dp"
+                    android:padding="@dimen/space_8x"
+                    android:src="@drawable/main_icon" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="@dimen/space_16x"
+                    android:elevation="2dp"
+                    android:padding="@dimen/space_8x"
+                    android:src="@drawable/main_icon" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="@dimen/space_16x"
+                    android:elevation="2dp"
+                    android:padding="@dimen/space_8x"
+                    android:src="@drawable/main_icon" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:padding="@dimen/space_8x"
-                    android:scaleType="centerInside"
-                    app:srcCompat="@drawable/main_icon" />
+                    android:orientation="vertical"
+                    android:gravity="center">
 
-            </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_margin="@dimen/space_4x"
+                            android:id="@+id/pack_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
 
-        </com.google.android.material.card.MaterialCardView>
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/img_cover_user"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:elevation="@dimen/space_2x"
+                                android:padding="@dimen/space_4x"
+                                android:src="@drawable/main_icon" />
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/card_layout_name"
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/ic_edit_img_user"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignEnd="@id/img_cover_user"
+                                android:layout_alignBottom="@id/img_cover_user"
+                                android:background="@android:color/transparent"
+                                android:src="@drawable/ic_edit" />
+
+                        </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sample_name"
+                        style="@style/CoinBitText.Title"
+                        android:layout_gravity="center_horizontal"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </HorizontalScrollView>
+
+        <View
+            android:id="@+id/ivew_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="@dimen/space_16x"
+            android:layout_marginEnd="@dimen/space_16x"
+            android:background="@color/grey_custom"
+            app:layout_constraintTop_toBottomOf="@id/nested_profPack_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/space_20x"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:padding="@dimen/space_8x"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/space_8x"
-            app:cardCornerRadius="@dimen/space_8x"
-            app:strokeColor="@color/grey_custom"
-            app:strokeWidth="2dp">
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/space_20x"
+            app:layout_constraintTop_toBottomOf="@id/ivew_line"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/read_offline"
+                    style="@style/CoinBitText.Body3.Dark"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_rope"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="vertical"
                 android:padding="@dimen/space_8x">
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    style="@style/CoinBitText.BodyAlternate.Small"
-                    android:layout_width="wrap_content"
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/pack1"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/name" />
+                    android:layout_marginStart="@dimen/space_4x"
+                    android:layout_marginTop="@dimen/space_8x"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/txt_user_name"
-                    style="@style/CoinBitText.Body1"
-                    android:layout_width="wrap_content"
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_title1"
+                        style="@style/CoinBitText.Body2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/science" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycer_science"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layoutAnimation="@anim/recycler"
+                            tools:itemCount="1"
+                            tools:listitem="@layout/item_recycler_home" />
+
+                    </HorizontalScrollView>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/pack2"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="@dimen/space_16x"
-                    android:text="@string/sample_name" />
+                    android:layout_marginStart="@dimen/space_4x"
+                    android:layout_marginTop="@dimen/space_8x"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_title2"
+                        style="@style/CoinBitText.Body2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/more" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_history"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layoutAnimation="@anim/recycler"
+                            tools:itemCount="1"
+                            tools:listitem="@layout/item_recycler_home" />
+
+                    </HorizontalScrollView>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/pack3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_4x"
+                    android:layout_marginTop="@dimen/space_8x"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_title3"
+                        style="@style/CoinBitText.Body2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/story" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_philosophy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layoutAnimation="@anim/recycler"
+                            tools:itemCount="1"
+                            tools:listitem="@layout/item_recycler_home" />
+
+                    </HorizontalScrollView>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
-        </com.google.android.material.card.MaterialCardView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.core.widget.NestedScrollView>

@@ -66,24 +66,13 @@
             android:layout_marginBottom="56dp"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="wrap_content"
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation_main"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/space_16x"
             android:layout_gravity="bottom"
-            app:cardCornerRadius="@dimen/space_8x"
-            app:cardElevation="0dp"
-            app:strokeColor="@color/grey_custom"
-            app:strokeWidth="2dp">
-
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:id="@+id/bottom_navigation_main"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:labelVisibilityMode="selected"
-                app:menu="@menu/menu_bottom_navigation" />
-
-        </com.google.android.material.card.MaterialCardView>
+            app:labelVisibilityMode="selected"
+            app:menu="@menu/menu_bottom_navigation" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

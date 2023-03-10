@@ -1,46 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="200dp"
-    android:layout_height="100dp"
-    app:cardCornerRadius="8dp"
-    android:layout_marginStart="4dp"
-    android:layout_marginEnd="4dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="120dp"
+    android:layout_height="140dp"
+    android:layout_marginStart="@dimen/space_4x"
+    android:layout_marginEnd="@dimen/space_4x"
+    app:cardCornerRadius="@dimen/space_8x"
+    android:elevation="0dp"
+    app:strokeWidth="@dimen/space_2x"
+    app:strokeColor="@color/yellow_back">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/img_recycler_home"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:srcCompat="@drawable/ic_launcher_background"
-        android:scaleType="fitXY"/>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:padding="8dp">
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/title_recycler_home"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/title"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:ems="10"
-            style="@style/CoinBitText.BodyTertiary.Brown"/>
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/desc_recycler_home"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sample_desc"
-            style="@style/CoinBitText.Title.Borwn"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:ems="12"/>
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_launcher_background" />
 
 </com.google.android.material.card.MaterialCardView>

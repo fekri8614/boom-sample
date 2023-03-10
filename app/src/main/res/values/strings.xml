@@ -10,7 +10,7 @@
     <string name="heroes">Heroes</string>
     <string name="title">Title</string>
     <string name="sample_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</string>
-    <string name="science">Science</string>
+    <string name="science">Scientific</string>
     <string name="philosophy">Philosophy</string>
     <string name="story">Story</string>
     <string name="search_message">Search books…</string>
@@ -65,4 +65,6 @@
     <string name="description">Description</string>
     <string name="buy">Buy</string>
     <string name="preview">Preview</string>
+    <string name="history">History</string>
+    <string name="read_offline">Read offline</string>
 </resources>
