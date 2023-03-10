@@ -11,3 +11,5 @@ const val API_HOST = "X-RapidAPI-Host: superhero-search.p.rapidapi.com"
 const val KEY_SEND_DATA_TO_SHOW = "send_buyData_to_ShowHeroesActivity"
 const val KEY_PUT_NAME_SHARED = "key_put_nameUser_sharedPreferences"
 
+// PERMISSION code -->
+const val GALLERY_REQUEST_CODE = 1001

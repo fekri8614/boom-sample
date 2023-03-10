@@ -1,15 +1,18 @@
 package info.fekri.boom.ui.fragment
 
 import android.content.Context
-import android.content.SharedPreferences
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.rajat.pdfviewer.PdfViewerActivity
+import info.fekri.boom.databinding.DialogProfileIconInfoBinding
 import info.fekri.boom.databinding.FragmentProfileBinding
 import info.fekri.boom.extra.MoreUiEvents
 import info.fekri.boom.extra.PoemsUiEvents
@@ -25,6 +28,7 @@ import info.fekri.boom.ux.room.MyDatabase
 class ProfileFragment(private val mContext: Context) : Fragment(), ScienceEvents, MoreUiEvents,
     PoemsUiEvents {
     private lateinit var binding: FragmentProfileBinding
+
     private val scienceDao = MyDatabase.getDatabase(mContext).scienceDao
     private val poemsDao = MyDatabase.getDatabase(mContext).poemsDao
     private val moreDao = MyDatabase.getDatabase(mContext).moreDao
@@ -47,6 +51,40 @@ class ProfileFragment(private val mContext: Context) : Fragment(), ScienceEvents
         scienceUi()
         moreUi()
         poemsUi()
+        topProfileUi()
+    }
+
+    private fun topProfileUi() {
+        readBookIcon()
+        setProfileIcon()
+    }
+
+    private fun setProfileIcon() {
+        binding.icEditImgUser.setOnClickListener { setImageFromGallery() }
+    }
+
+    private fun setImageFromGallery() {
+        Toast.makeText(
+            requireContext().applicationContext,
+            "This access will be allowed",
+            Toast.LENGTH_SHORT
+        ).show()
+    }
+
+    private fun readBookIcon() {
+        /* Show a dialog and close it after 3 seconds */
+        binding.itemIconTopReader.setOnClickListener {
+            val dialog = AlertDialog.Builder(requireContext()).create()
+            val dialogBinding = DialogProfileIconInfoBinding.inflate(layoutInflater)
+            dialog.setView(dialogBinding.root)
+            dialog.show()
+
+            Handler().postDelayed({
+
+                dialog.dismiss()
+
+            }, 3000)
+        }
     }
 
     private fun poemsUi() {
@@ -140,7 +178,8 @@ class ProfileFragment(private val mContext: Context) : Fragment(), ScienceEvents
             LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
     }
 
-    // Science Events -->
+    // Events -->
+    // Science
     override fun onScienceItemClicked(book: ScienceData) {
         startActivity(
             PdfViewerActivity
@@ -155,10 +194,10 @@ class ProfileFragment(private val mContext: Context) : Fragment(), ScienceEvents
     }
 
     override fun onScienceItemLongClicked(book: ScienceData) {
-        // do nothing
+        // delete
     }
 
-    // MoreUi Events -->
+    // MoreUi
     override fun onMoreUiItemClicked(book: MoreUiData) {
         startActivity(
             PdfViewerActivity
@@ -173,10 +212,10 @@ class ProfileFragment(private val mContext: Context) : Fragment(), ScienceEvents
     }
 
     override fun onMoreUiItemLongClicked(book: MoreUiData) {
-        // do nothing
+        // delete
     }
 
-    // PoemsUi Events -->
+    // PoemsUi
     override fun onPoemsUiItemClicked(book: PoemsUiData) {
         startActivity(
             PdfViewerActivity
@@ -191,6 +230,6 @@ class ProfileFragment(private val mContext: Context) : Fragment(), ScienceEvents
     }
 
     override fun onPoemsUiItemLongClicked(book: PoemsUiData) {
-        // do nothing
+        // delete
     }
 }

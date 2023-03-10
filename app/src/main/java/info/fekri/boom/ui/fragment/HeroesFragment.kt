@@ -8,7 +8,7 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import info.fekri.boom.databinding.FragmentBuyBinding
+import info.fekri.boom.databinding.FragmentHeroesBinding
 import info.fekri.boom.extra.HeroesEvent
 import info.fekri.boom.extra.KEY_SEND_DATA_TO_SHOW
 import info.fekri.boom.ui.activity.ShowHeroesActivity
@@ -17,7 +17,7 @@ import info.fekri.boom.ux.retrofit.ApiManager
 import info.fekri.boom.ux.retrofit.models.HeroesData
 
 class HeroesFragment() : Fragment(), HeroesEvent {
-    private lateinit var binding: FragmentBuyBinding
+    private lateinit var binding: FragmentHeroesBinding
     private val apiManager = ApiManager()
     private lateinit var heroesAdapter: HeroesAdapter
 
@@ -26,7 +26,7 @@ class HeroesFragment() : Fragment(), HeroesEvent {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentBuyBinding.inflate(layoutInflater)
+        binding = FragmentHeroesBinding.inflate(layoutInflater)
         return binding.root
     }
 
