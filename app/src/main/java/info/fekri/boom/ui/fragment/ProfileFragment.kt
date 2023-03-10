@@ -3,13 +3,19 @@ package info.fekri.boom.ui.fragment
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.snackbar.Snackbar
 import com.rajat.pdfviewer.PdfViewerActivity
+import info.fekri.boom.R
+import info.fekri.boom.databinding.DialogProfileIconInfoBinding
 import info.fekri.boom.databinding.FragmentProfileBinding
 import info.fekri.boom.extra.MoreUiEvents
 import info.fekri.boom.extra.PoemsUiEvents
@@ -47,6 +53,25 @@ class ProfileFragment(private val mContext: Context) : Fragment(), ScienceEvents
         scienceUi()
         moreUi()
         poemsUi()
+        topProfileUi()
+    }
+
+    private fun topProfileUi() {
+
+        /* Show a dialog and close it after 3 seconds */
+        binding.itemIconTopReader.setOnClickListener {
+            val dialog = AlertDialog.Builder(requireContext()).create()
+            val dialogBinding = DialogProfileIconInfoBinding.inflate(layoutInflater)
+            dialog.setView(dialogBinding.root)
+            dialog.show()
+
+            Handler().postDelayed({
+
+                dialog.dismiss()
+
+            }, 3000)
+        }
+
     }
 
     private fun poemsUi() {
@@ -84,7 +109,6 @@ class ProfileFragment(private val mContext: Context) : Fragment(), ScienceEvents
         binding.recyclerPhilosophy.layoutManager =
             LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
     }
-
     private fun moreUi() {
         val data = arrayListOf(
             MoreUiData(
@@ -109,7 +133,6 @@ class ProfileFragment(private val mContext: Context) : Fragment(), ScienceEvents
         binding.recyclerHistory.layoutManager =
             LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
     }
-
     private fun scienceUi() {
         val data = listOf(
             ScienceData(
@@ -153,9 +176,8 @@ class ProfileFragment(private val mContext: Context) : Fragment(), ScienceEvents
                 )
         )
     }
-
     override fun onScienceItemLongClicked(book: ScienceData) {
-        // do nothing
+        // delete
     }
 
     // MoreUi Events -->
@@ -171,9 +193,8 @@ class ProfileFragment(private val mContext: Context) : Fragment(), ScienceEvents
                 )
         )
     }
-
     override fun onMoreUiItemLongClicked(book: MoreUiData) {
-        // do nothing
+        // delete
     }
 
     // PoemsUi Events -->
@@ -189,8 +210,7 @@ class ProfileFragment(private val mContext: Context) : Fragment(), ScienceEvents
                 )
         )
     }
-
     override fun onPoemsUiItemLongClicked(book: PoemsUiData) {
-        // do nothing
+        // delete
     }
 }
