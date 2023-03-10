@@ -20,8 +20,11 @@ Boom is an application to read and search about books.
   * Navigation Drawer / Bottom
   * Retrifit
   * Room
+  * Gson
+  * Volley
   * SharedPreferences
   * Glide
+  * Picasso
   * PdfViewer
   * Swipe-Refresh
   * ...
@@ -62,6 +65,12 @@ Boom is an application to read and search about books.
         implementation "androidx.room:room-runtime:$room_version"
         implementation "androidx.room:room-ktx:$room_version"
         kapt "androidx.room:room-compiler:$room_version"
+        
+        // Volley ->
+        implementation 'com.android.volley:volley:1.2.1'
+        
+        // Picasso ->
+        implementation 'com.squareup.picasso:picasso:2.8'
     
     }
   
@@ -90,8 +99,10 @@ Boom is an application to read and search about books.
 
 ---
 
-##### I will update more. Will update Restful-API ability
+Also, I got help from [GeeksforGeeks](https://www.geeksforgeeks.org/)
+
+### [Android - Build a Book Library App using Kotlin - GeeksforGeeks](https://www.geeksforgeeks.org/android-build-a-book-library-app-using-kotlin/)
 
 ---
 
-Happy codding..!!!😋😍😈
+I really enjoyrd this project!! I hope you will enjoy too!😍😝
