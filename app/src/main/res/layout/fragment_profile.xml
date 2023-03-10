@@ -58,6 +58,7 @@
 
                             <de.hdodenhof.circleimageview.CircleImageView
                                 android:id="@+id/img_cover_user"
+                                android:scaleType="centerCrop"
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
                                 android:elevation="@dimen/space_2x"

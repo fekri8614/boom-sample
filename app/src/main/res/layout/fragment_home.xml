@@ -4,30 +4,135 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="bottom"
+    android:background="@color/background_main"
     android:orientation="vertical"
+    android:padding="@dimen/space_8x"
     tools:context=".ui.fragment.HomeFragment">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/space_20x"
         android:gravity="bottom"
         android:orientation="vertical">
 
-        <androidx.cardview.widget.CardView
+        <!--    TOP part is here    -->
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/space_8x"
-            android:backgroundTint="@color/yellow_back"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp">
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="match_parent"
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/item_libraryAll_home"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/sample" />
+                android:layout_marginEnd="@dimen/space_16x"
+                android:gravity="center"
+                android:orientation="vertical">
 
-        </androidx.cardview.widget.CardView>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:elevation="@dimen/space_2x"
+                    android:padding="@dimen/space_8x"
+                    android:src="@drawable/img_libray" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/CoinBitText.TitleAlternate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/library" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/item_libraryAudio_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space_16x"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:elevation="@dimen/space_2x"
+                    android:padding="@dimen/space_8x"
+                    android:src="@drawable/img_audio_lib" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/CoinBitText.TitleAlternate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/audio_library" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/item_libraryWatch_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space_16x"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:elevation="@dimen/space_2x"
+                    android:padding="@dimen/space_8x"
+                    android:src="@drawable/img_watch_list" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/CoinBitText.TitleAlternate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/watch" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/item_libraryAll_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:elevation="@dimen/space_2x"
+                    android:padding="@dimen/space_8x"
+                    android:src="@drawable/img_all" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/CoinBitText.TitleAlternate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/all" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_marginStart="@dimen/space_16x"
+            android:layout_marginEnd="@dimen/space_16x"
+            android:layout_marginTop="@dimen/space_20x"
+            android:background="@color/grey_custom"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>
+
+        <!--    CENTER part is here    -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_20x">
+
+            <!--      I will add three recyclerview and complete theme     -->
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

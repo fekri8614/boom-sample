@@ -67,4 +67,8 @@
     <string name="preview">Preview</string>
     <string name="history">History</string>
     <string name="read_offline">Read offline</string>
+    <string name="library">Library</string>
+    <string name="audio_library">Audio library</string>
+    <string name="watch">Watch</string>
+    <string name="all">All</string>
 </resources>
