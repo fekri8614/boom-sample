@@ -27,6 +27,7 @@ Boom is an application to read and search about books.
   * Picasso
   * PdfViewer
   * Swipe-Refresh
+  * CircularImageView
   * ...
 
 ---
@@ -48,6 +49,9 @@ Boom is an application to read and search about books.
         // Glide - load images
         implementation 'com.github.bumptech.glide:glide:4.14.2'
         annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
+        
+        // CircularImageView
+        implementation 'de.hdodenhof:circleimageview:3.1.0'
         
         // PdfViewer
         implementation 'com.github.afreakyelf:Pdf-Viewer:v1.0.7'
@@ -101,7 +105,7 @@ Boom is an application to read and search about books.
 
 Also, I got help from [GeeksforGeeks](https://www.geeksforgeeks.org/)
 
-### [Android - Build a Book Library App using Kotlin - GeeksforGeeks](https://www.geeksforgeeks.org/android-build-a-book-library-app-using-kotlin/)
+##### [Android - Build a Book Library App using Kotlin - GeeksforGeeks](https://www.geeksforgeeks.org/android-build-a-book-library-app-using-kotlin/)
 
 ---
 
