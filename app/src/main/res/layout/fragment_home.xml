@@ -24,11 +24,13 @@
             android:orientation="horizontal">
 
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/item_libraryAll_home"
+                android:id="@+id/item_library_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/space_16x"
                 android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
                 android:orientation="vertical">
 
                 <de.hdodenhof.circleimageview.CircleImageView
@@ -52,6 +54,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/space_16x"
                 android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
                 android:orientation="vertical">
 
                 <de.hdodenhof.circleimageview.CircleImageView
@@ -75,6 +79,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/space_16x"
                 android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
                 android:orientation="vertical">
 
                 <de.hdodenhof.circleimageview.CircleImageView
@@ -97,6 +103,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
                 android:orientation="vertical">
 
                 <de.hdodenhof.circleimageview.CircleImageView
