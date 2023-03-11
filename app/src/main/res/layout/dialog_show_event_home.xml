@@ -9,22 +9,20 @@
     app:strokeWidth="@dimen/space_2x"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
+        android:orientation="vertical"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/space_16x">
 
         <androidx.appcompat.widget.AppCompatTextView
-            app:layout_constraintBottom_toBottomOf="parent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/dialog_profile_message"
+            android:text="@string/this_ability_will_be_added"
             style="@style/CoinBitText.TitleAlternate"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:layout_centerInParent="true"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+    </RelativeLayout>
 
 </com.google.android.material.card.MaterialCardView>
