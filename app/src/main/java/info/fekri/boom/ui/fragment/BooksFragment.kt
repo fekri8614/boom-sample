@@ -11,13 +11,10 @@ import android.widget.Toast
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.appcompat.widget.AppCompatImageButton
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
-import info.fekri.boom.R
 import info.fekri.boom.databinding.FragmentBooksBinding
 import info.fekri.boom.ux.adapter.BookRVAdapter
 import info.fekri.boom.ux.data.BookRvModel

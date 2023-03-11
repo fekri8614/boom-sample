@@ -17,10 +17,10 @@ import info.fekri.boom.ux.data.BookRvModel
 class BookRVAdapter(
     private var bookList: ArrayList<BookRvModel>,
     private var ctx: Context
-): RecyclerView.Adapter<BookRVAdapter.BookViewHolder>() {
+) : RecyclerView.Adapter<BookRVAdapter.BookViewHolder>() {
     private lateinit var binding: ItemBooksBinding
 
-    inner class BookViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+    inner class BookViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val bookTitle: AppCompatTextView = binding.idTvBookName
         val bookPages: AppCompatTextView = binding.idTVBookPages
         val bookIV: AppCompatImageView = binding.idIVBook
@@ -49,7 +49,7 @@ class BookRVAdapter(
 
             // I can send all data by one Intent
             // I tried other way!
-            val intent = Intent(ctx,BookDetailsActivity::class.java)
+            val intent = Intent(ctx, BookDetailsActivity::class.java)
             intent.putExtra("title", bookInfo.title)
             intent.putExtra("subtitle", bookInfo.subtitle)
             intent.putExtra("authors", bookInfo.authors)

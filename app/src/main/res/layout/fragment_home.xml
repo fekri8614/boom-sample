@@ -1,204 +1,227 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_refresh_home"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/background_main"
-    android:orientation="vertical"
-    android:padding="@dimen/space_8x"
-    tools:context=".ui.fragment.HomeFragment">
+    android:layout_height="wrap_content">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/space_20x"
-        android:gravity="bottom"
-        android:orientation="vertical">
+        android:background="@color/background_main"
+        android:orientation="vertical"
+        android:padding="@dimen/space_8x"
+        tools:context=".ui.fragment.HomeFragment">
 
-        <!--    TOP part is here    -->
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/item_library_home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/space_16x"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:elevation="@dimen/space_2x"
-                    android:padding="@dimen/space_8x"
-                    android:src="@drawable/img_libray" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    style="@style/CoinBitText.TitleAlternate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/library" />
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/item_libraryAudio_home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/space_16x"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:elevation="@dimen/space_2x"
-                    android:padding="@dimen/space_8x"
-                    android:src="@drawable/img_audio_lib" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    style="@style/CoinBitText.TitleAlternate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/audio_library" />
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/item_libraryWatch_home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/space_16x"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:elevation="@dimen/space_2x"
-                    android:padding="@dimen/space_8x"
-                    android:src="@drawable/img_watch_list" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    style="@style/CoinBitText.TitleAlternate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/watch" />
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/item_libraryAll_home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:elevation="@dimen/space_2x"
-                    android:padding="@dimen/space_8x"
-                    android:src="@drawable/img_all" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    style="@style/CoinBitText.TitleAlternate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/all" />
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_marginStart="@dimen/space_16x"
+            android:layout_height="match_parent"
             android:layout_marginTop="@dimen/space_20x"
-            android:layout_marginEnd="@dimen/space_16x"
-            android:background="@color/grey_custom" />
+            android:gravity="bottom"
+            android:orientation="vertical">
 
-        <!--    CENTER part is here    -->
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="@dimen/space_4x"
-            android:layout_marginTop="@dimen/space_20x">
-
-            <LinearLayout
+            <!--    TOP part is here    -->
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="@dimen/space_4x">
+                android:gravity="center"
+                android:orientation="horizontal">
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    style="@style/CoinBitText.Title"
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/item_library_home"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/imagination" />
+                    android:layout_marginEnd="@dimen/space_16x"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                <androidx.core.widget.NestedScrollView
-                    android:padding="@dimen/space_8x"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:elevation="@dimen/space_2x"
+                        android:padding="@dimen/space_8x"
+                        android:src="@drawable/img_libray" />
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recycler_imagination_home"
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/CoinBitText.TitleAlternate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        tools:itemCount="1"
-                        tools:listitem="@layout/item_recycler_home"/>
+                        android:text="@string/library" />
 
-                </androidx.core.widget.NestedScrollView>
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-            </LinearLayout>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/item_libraryAudio_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_16x"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-            <LinearLayout
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:elevation="@dimen/space_2x"
+                        android:padding="@dimen/space_8x"
+                        android:src="@drawable/img_audio_lib" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/CoinBitText.TitleAlternate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/audio_library" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/item_libraryWatch_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_16x"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:elevation="@dimen/space_2x"
+                        android:padding="@dimen/space_8x"
+                        android:src="@drawable/img_watch_list" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/CoinBitText.TitleAlternate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/watch" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/item_libraryAll_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:elevation="@dimen/space_2x"
+                        android:padding="@dimen/space_8x"
+                        android:src="@drawable/img_all" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/CoinBitText.TitleAlternate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:layout_height="2dp"
+                android:layout_marginStart="@dimen/space_16x"
                 android:layout_marginTop="@dimen/space_20x"
+                android:layout_marginEnd="@dimen/space_16x"
+                android:background="@color/grey_custom" />
+
+            <!--    CENTER part is here    -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_20x"
+                android:orientation="vertical"
+                android:gravity="center"
                 android:padding="@dimen/space_4x">
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    style="@style/CoinBitText.Title"
+                <ProgressBar
+                    android:id="@+id/idLoading_progressbar_home"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/story" />
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
 
-                <androidx.core.widget.NestedScrollView
-                    android:padding="@dimen/space_8x"
+                <LinearLayout
+                    android:id="@+id/linear_first_home"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_4x">
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recycler_story_home"
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/CoinBitText.Title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        tools:itemCount="1"
-                        tools:listitem="@layout/item_recycler_home"/>
+                        android:text="@string/imagination" />
 
-                </androidx.core.widget.NestedScrollView>
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/space_8x">
 
-            </LinearLayout>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_imagination_home"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:itemCount="1"
+                            tools:listitem="@layout/item_books" />
+
+                    </androidx.core.widget.NestedScrollView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linear_first_home"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/space_20x"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_4x">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/CoinBitText.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/poems" />
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/space_8x">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_poems_home"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:itemCount="1"
+                            tools:listitem="@layout/item_books" />
+
+                    </androidx.core.widget.NestedScrollView>
+
+                </LinearLayout>
+
+            </RelativeLayout>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
 
-</androidx.core.widget.NestedScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
