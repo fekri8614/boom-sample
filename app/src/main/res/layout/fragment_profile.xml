@@ -102,7 +102,7 @@
             android:layout_marginTop="@dimen/space_20x"/>
 
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:padding="@dimen/space_8x"
+            android:padding="@dimen/space_4x"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -136,7 +136,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="@dimen/space_8x">
+                android:padding="@dimen/space_4x">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/pack1"
@@ -150,7 +150,7 @@
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/txt_title1"
-                        style="@style/CoinBitText.Body2"
+                        style="@style/CoinBitText.Title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/science" />
@@ -183,7 +183,7 @@
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/txt_title2"
-                        style="@style/CoinBitText.Body2"
+                        style="@style/CoinBitText.Title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/more" />
@@ -216,7 +216,7 @@
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/txt_title3"
-                        style="@style/CoinBitText.Body2"
+                        style="@style/CoinBitText.Title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/story" />
