@@ -28,9 +28,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/space_16x"
-                android:gravity="center"
                 android:clickable="true"
                 android:focusable="true"
+                android:gravity="center"
                 android:orientation="vertical">
 
                 <de.hdodenhof.circleimageview.CircleImageView
@@ -53,9 +53,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/space_16x"
-                android:gravity="center"
                 android:clickable="true"
                 android:focusable="true"
+                android:gravity="center"
                 android:orientation="vertical">
 
                 <de.hdodenhof.circleimageview.CircleImageView
@@ -78,9 +78,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/space_16x"
-                android:gravity="center"
                 android:clickable="true"
                 android:focusable="true"
+                android:gravity="center"
                 android:orientation="vertical">
 
                 <de.hdodenhof.circleimageview.CircleImageView
@@ -102,9 +102,9 @@
                 android:id="@+id/item_libraryAll_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:clickable="true"
                 android:focusable="true"
+                android:gravity="center"
                 android:orientation="vertical">
 
                 <de.hdodenhof.circleimageview.CircleImageView
@@ -125,20 +125,77 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <View
-            android:layout_marginStart="@dimen/space_16x"
-            android:layout_marginEnd="@dimen/space_16x"
-            android:layout_marginTop="@dimen/space_20x"
-            android:background="@color/grey_custom"
             android:layout_width="match_parent"
-            android:layout_height="2dp"/>
+            android:layout_height="2dp"
+            android:layout_marginStart="@dimen/space_16x"
+            android:layout_marginTop="@dimen/space_20x"
+            android:layout_marginEnd="@dimen/space_16x"
+            android:background="@color/grey_custom" />
 
         <!--    CENTER part is here    -->
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/space_4x"
             android:layout_marginTop="@dimen/space_20x">
 
-            <!--      I will add three recyclerview and complete theme     -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/space_4x">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/CoinBitText.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/imagination" />
+
+                <androidx.core.widget.NestedScrollView
+                    android:padding="@dimen/space_8x"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_imagination_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:itemCount="1"
+                        tools:listitem="@layout/item_recycler_home"/>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/space_20x"
+                android:padding="@dimen/space_4x">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/CoinBitText.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/story" />
+
+                <androidx.core.widget.NestedScrollView
+                    android:padding="@dimen/space_8x"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_story_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:itemCount="1"
+                        tools:listitem="@layout/item_recycler_home"/>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </LinearLayout>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
