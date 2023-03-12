@@ -25,7 +25,7 @@ import info.fekri.boom.ux.data.PoemsUiData
 import info.fekri.boom.ux.data.ScienceData
 import info.fekri.boom.ux.room.MyDatabase
 
-class ProfileFragment(private val mContext: Context) : Fragment(), ScienceEvents, MoreUiEvents,
+class ProfileFragment(mContext: Context) : Fragment(), ScienceEvents, MoreUiEvents,
     PoemsUiEvents {
     private lateinit var binding: FragmentProfileBinding
 
@@ -124,7 +124,7 @@ class ProfileFragment(private val mContext: Context) : Fragment(), ScienceEvents
     }
 
     private fun moreUi() {
-        val data = arrayListOf(
+        val data = listOf(
             MoreUiData(
                 title = "اطلاعات طوریستی کشور های جهان",
                 desc = "دور دنیا در 10 دقیقه",
@@ -137,7 +137,7 @@ class ProfileFragment(private val mContext: Context) : Fragment(), ScienceEvents
                         "(مشترك المنافع) استرالیا (Australia of Commonwealth (کشوري اسـت در ن یمکـره",
                 coverImageUrl = "https://ketabha.org/wp-content/uploads/2017/10/australia.jpg",
                 pdfUrl = "https://www.ketabha.org/wp-content/uploads/2017/10/Austorolliaketabha.org_.pdf"
-            ),
+            )
         )
         moreDao.insertAllMore(data)
 

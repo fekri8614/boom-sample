@@ -59,6 +59,7 @@ dependencies {
 
     // PdfViewer ->
     implementation 'com.github.afreakyelf:Pdf-Viewer:v1.0.7'
+    implementation 'com.dmitryborodin:pdfview-android:1.1.0'
 
     // Retrofit2 ->
     def retrofit2_version = "2.9.0"

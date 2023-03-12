@@ -1,9 +1,9 @@
 package info.fekri.boom.ux.retrofit.models
 
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
-import android.os.Parcelable
 
 class HeroesData : ArrayList<HeroesData.HeroesDataItem>(){
     @Parcelize
