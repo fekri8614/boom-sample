@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/background_main"
+    android:orientation="vertical"
     tools:context=".ui.fragment.ProfileFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,73 +15,78 @@
         android:padding="@dimen/space_8x">
 
         <HorizontalScrollView
-            android:layout_marginTop="@dimen/space_20x"
             android:id="@+id/nested_profPack_profile"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/space_20x"
+            android:scrollbars="none"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:scrollbars="none">
+            app:layout_constraintBottom_toTopOf="@id/ivew_line"
+            app:layout_constraintTop_toTopOf="parent">
 
             <!--    I may add another items later    -->
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center|end"
                 android:layout_gravity="center|end"
+                android:gravity="center|end"
                 android:orientation="horizontal"
-                android:padding="@dimen/space_4x">
+                android:padding="@dimen/space_4x"
+                android:weightSum="2">
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/item_icon_topReader"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_marginEnd="@dimen/space_16x"
+                    android:layout_weight="1"
                     android:elevation="2dp"
                     android:padding="@dimen/space_8x"
                     android:src="@drawable/img_top_reader" />
 
                 <androidx.appcompat.widget.LinearLayoutCompat
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                        <RelativeLayout
-                            android:layout_margin="@dimen/space_4x"
-                            android:id="@+id/pack_name"
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:id="@+id/pack_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_margin="@dimen/space_4x"
+                        android:gravity="center">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/img_cover_user"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_centerInParent="true"
+                            android:elevation="@dimen/space_2x"
+                            android:padding="@dimen/space_4x"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/main_icon" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ic_edit_img_user"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:gravity="center">
+                            android:layout_alignEnd="@id/img_cover_user"
+                            android:layout_alignBottom="@id/img_cover_user"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_edit" />
 
-                            <de.hdodenhof.circleimageview.CircleImageView
-                                android:id="@+id/img_cover_user"
-                                android:scaleType="centerCrop"
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:elevation="@dimen/space_2x"
-                                android:padding="@dimen/space_4x"
-                                android:src="@drawable/main_icon" />
-
-                            <de.hdodenhof.circleimageview.CircleImageView
-                                android:id="@+id/ic_edit_img_user"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignEnd="@id/img_cover_user"
-                                android:layout_alignBottom="@id/img_cover_user"
-                                android:background="@android:color/transparent"
-                                android:src="@drawable/ic_edit" />
-
-                        </RelativeLayout>
+                    </RelativeLayout>
 
                     <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/CoinBitText.Title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/sample_name"
-                        style="@style/CoinBitText.Title"
-                        android:layout_gravity="center_horizontal"/>
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/app_name" />
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -94,41 +99,41 @@
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:layout_marginStart="@dimen/space_16x"
+            android:layout_marginTop="@dimen/space_20x"
             android:layout_marginEnd="@dimen/space_16x"
             android:background="@color/grey_custom"
-            app:layout_constraintTop_toBottomOf="@id/nested_profPack_profile"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="@dimen/space_20x"/>
+            app:layout_constraintTop_toBottomOf="@id/nested_profPack_profile" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:padding="@dimen/space_4x"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_20x"
             android:gravity="center"
             android:orientation="vertical"
-            android:layout_marginTop="@dimen/space_20x"
-            app:layout_constraintTop_toBottomOf="@id/ivew_line"
+            android:padding="@dimen/space_4x"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            app:layout_constraintTop_toBottomOf="@id/ivew_line">
 
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:orientation="vertical"
-                android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/CoinBitText.Body3.Dark"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/read_offline"
-                    style="@style/CoinBitText.Body3.Dark"/>
+                    android:text="@string/read_offline" />
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_rope"/>
+                    app:srcCompat="@drawable/ic_rope" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -171,6 +176,7 @@
                     </HorizontalScrollView>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
+
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/pack2"
                     android:layout_width="match_parent"
@@ -204,6 +210,7 @@
                     </HorizontalScrollView>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
+
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/pack3"
                     android:layout_width="match_parent"

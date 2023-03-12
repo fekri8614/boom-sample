@@ -51,6 +51,7 @@ class ProfileFragment(mContext: Context) : Fragment(), ScienceEvents, MoreUiEven
 
     private fun topProfileUi() {
         readBookIcon()
+
         setProfileIcon()
     }
 
