@@ -25,7 +25,7 @@ Boom is an application to read and search about books.
   * SharedPreferences
   * Glide
   * Picasso
-  * PdfViewer
+  * PdfViewer (2 pdfViewer)
   * Swipe-Refresh
   * CircularImageView
   * ...
@@ -33,6 +33,12 @@ Boom is an application to read and search about books.
 ---
 
 #### Gradle dependencies:
+
+  in `AndroidManifest.xml`:
+    
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     
   in `build.gradle:app`:
     
@@ -57,6 +63,7 @@ Boom is an application to read and search about books.
         
         // PdfViewer
         implementation 'com.github.afreakyelf:Pdf-Viewer:v1.0.7'
+        implementation 'com.dmitryborodin:pdfview-android:1.1.0'
         
         // Retrofit2 ->
         def retrofit2_version = "2.9.0"
