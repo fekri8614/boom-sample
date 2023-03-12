@@ -1,19 +1,19 @@
-### Boom
+### 📕 Boom
 
 ---
 
-#### This application is developed and designed by myself.
+#### ℹ This application is developed and designed by myself.
 
 ---
 
-#### About:
+#### ✔ About:
 Boom is an application to read and search about books.
 
-#### Developed with:
+#### 👌 Developed with:
   * Kotlin
   * Android-XML
 
-#### Used:
+#### 👨‍💻 Used:
   * RecyclerView
   * Material Components
   * Androidx Components
@@ -32,7 +32,7 @@ Boom is an application to read and search about books.
 
 ---
 
-#### Gradle dependencies:
+#### 📚 Gradle dependencies:
 
   in `AndroidManifest.xml`:
     
@@ -118,4 +118,4 @@ Also, I got help from [GeeksforGeeks](https://www.geeksforgeeks.org/)
 
 ---
 
-I really enjoyrd this project!! I hope you will enjoy too!😍😝
+I really enjoyrd this project!! I hope you will enjoy too!😍😝✌🤞
