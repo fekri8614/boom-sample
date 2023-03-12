@@ -22,7 +22,7 @@
     <string name="welcome_text">Welcome to Boom!</string>
     <string name="detail_welcome">Read and search with Boom about books!</string>
     <string name="desc_welcome">Description</string>
-    <string name="desc_welcome_desc">You can use Boom to read books and make fun for kids. Boom allows you to read books offline, but for better performance of the application, it is better to use the application online. It is possible to make changes by long clicking.\nPlease, let me know if you have an idea about the application.\nThis application is mostly for kids. They can read and play with heroes. Game and reading together!</string>
+    <string name="desc_welcome_desc">You can use Boom to read books and make fun for kids. Boom allows you to read books offline, but for better performance of the application, it is better to use the application online. It is possible to make changes by long clicking.\nPlease, let me know if you have an idea about the application.\nThis application is mostly for kids. They can read and play with heroes. Game and reading together!\nFor a better view, turn the phone ninety degrees.</string>
     <string name="contact_txt">Contact me:</string>
     <string name="contact_data">fekri.mohammadreza86@gmail.com</string>
     <string name="more">More!</string>
