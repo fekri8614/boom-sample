@@ -58,5 +58,7 @@ data class BookRvModel(
     var thumbnail: String,
     var previewLink: String,
     var infoLink: String,
-    var buyLink: String
+    var buyLink: String,
+    var pdfLink: String?
 ): Parcelable
+

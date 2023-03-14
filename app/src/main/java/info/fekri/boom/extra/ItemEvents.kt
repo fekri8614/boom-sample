@@ -13,7 +13,7 @@ interface ScienceEvents {
 }
 
 interface MoreUiEvents {
-    fun onMoreUiItemClicked(book:MoreUiData)
+    fun onMoreUiItemClicked(book: MoreUiData)
     fun onMoreUiItemLongClicked(book: MoreUiData)
 }
 
@@ -22,7 +22,6 @@ interface PoemsUiEvents {
     fun onPoemsUiItemLongClicked(book: PoemsUiData)
 }
 
-// --------------- BUY ------------------------
 interface HeroesEvent {
     fun onHeroesItemClicked(data: HeroesData.HeroesDataItem)
 
