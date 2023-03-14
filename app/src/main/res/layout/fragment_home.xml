@@ -24,10 +24,12 @@
             android:orientation="horizontal">
 
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/item_libraryAll_home"
+                android:id="@+id/item_library_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/space_16x"
+                android:clickable="true"
+                android:focusable="true"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -51,6 +53,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/space_16x"
+                android:clickable="true"
+                android:focusable="true"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -74,6 +78,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/space_16x"
+                android:clickable="true"
+                android:focusable="true"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -96,6 +102,8 @@
                 android:id="@+id/item_libraryAll_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -117,22 +125,117 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <View
-            android:layout_marginStart="@dimen/space_16x"
-            android:layout_marginEnd="@dimen/space_16x"
-            android:layout_marginTop="@dimen/space_20x"
-            android:background="@color/grey_custom"
             android:layout_width="match_parent"
-            android:layout_height="2dp"/>
+            android:layout_height="2dp"
+            android:layout_marginStart="@dimen/space_16x"
+            android:layout_marginTop="@dimen/space_20x"
+            android:layout_marginEnd="@dimen/space_16x"
+            android:background="@color/grey_custom" />
 
         <!--    CENTER part is here    -->
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/space_20x">
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/space_20x"
+            android:gravity="center"
+            android:orientation="vertical">
 
-            <!--      I will add three recyclerview and complete theme     -->
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/CoinBitText.Body3.Dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/for_you_free" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_rope" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_20x"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/space_4x">
+
+            <ProgressBar
+                android:id="@+id/progress_load_home"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linear_first_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical"
+                android:padding="@dimen/space_4x">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/CoinBitText.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/imagination" />
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/space_8x">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_show_imagine_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        tools:itemCount="1"
+                        tools:listitem="@layout/item_books" />
+
+                </androidx.core.widget.NestedScrollView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linear_first_home"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/space_20x"
+                android:orientation="vertical"
+                android:padding="@dimen/space_4x">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/CoinBitText.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/science" />
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/space_8x">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_show_scientific_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        tools:itemCount="1"
+                        tools:listitem="@layout/item_books" />
+
+                </androidx.core.widget.NestedScrollView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </RelativeLayout>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

@@ -2,7 +2,6 @@ package info.fekri.boom.ui.fragment
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,14 +9,12 @@ import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.appcompat.widget.AppCompatImageButton
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
-import info.fekri.boom.R
 import info.fekri.boom.databinding.FragmentBooksBinding
 import info.fekri.boom.ux.adapter.BookRVAdapter
 import info.fekri.boom.ux.data.BookRvModel
@@ -102,6 +99,7 @@ class BooksFragment : Fragment() {
                     val saleInfoObj = itemsObj.optJSONObject("saleInfo")
                     val buyLink = saleInfoObj.optString("buyLink")
                     val authorsArrayList: ArrayList<String> = ArrayList()
+                    val pdfLink = itemsObj.optJSONObject("accessInfo")?.optString("pdfLink")
                     if (authorsArray.length() != 0) {
                         for (j in 0 until authorsArray.length()) {
                             authorsArrayList.add(authorsArray.optString(i))
@@ -120,7 +118,8 @@ class BooksFragment : Fragment() {
                         thumbnail,
                         previewLink,
                         infoLink,
-                        buyLink
+                        buyLink,
+                        pdfLink
                     )
 
                     // pass model in our array list
@@ -143,13 +142,12 @@ class BooksFragment : Fragment() {
 
         }, { error ->
             // show toast if something went wrong
+            Log.v("boomLog", error.message.toString())
             Toast.makeText(
                 requireContext().applicationContext,
                 "No book found!",
                 Toast.LENGTH_SHORT
             ).show()
-
-            Log.v("boomLog", error.message.toString())
         })
 
         // at last, add request to the queue

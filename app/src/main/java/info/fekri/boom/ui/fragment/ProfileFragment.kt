@@ -23,15 +23,10 @@ import info.fekri.boom.ux.adapter.ScienceAdapter
 import info.fekri.boom.ux.data.MoreUiData
 import info.fekri.boom.ux.data.PoemsUiData
 import info.fekri.boom.ux.data.ScienceData
-import info.fekri.boom.ux.room.MyDatabase
 
-class ProfileFragment(private val mContext: Context) : Fragment(), ScienceEvents, MoreUiEvents,
+class ProfileFragment(mContext: Context) : Fragment(), ScienceEvents, MoreUiEvents,
     PoemsUiEvents {
     private lateinit var binding: FragmentProfileBinding
-
-    private val scienceDao = MyDatabase.getDatabase(mContext).scienceDao
-    private val poemsDao = MyDatabase.getDatabase(mContext).poemsDao
-    private val moreDao = MyDatabase.getDatabase(mContext).moreDao
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -56,6 +51,7 @@ class ProfileFragment(private val mContext: Context) : Fragment(), ScienceEvents
 
     private fun topProfileUi() {
         readBookIcon()
+
         setProfileIcon()
     }
 
@@ -114,17 +110,15 @@ class ProfileFragment(private val mContext: Context) : Fragment(), ScienceEvents
                 pdfUrl = "https://istgahekoodak.ir/download2/ebook/Roobah%20Va%20Agha%20Mooshe_istgahekoodak.ir.pdf"
             )
         )
-        poemsDao.insertAllPoems(data)
 
-        val bookData = poemsDao.getAllPoemsBooks()
-        val poemsAdapter = PoemsAdapter(ArrayList(bookData), this)
+        val poemsAdapter = PoemsAdapter(ArrayList(data), this)
         binding.recyclerPhilosophy.adapter = poemsAdapter
         binding.recyclerPhilosophy.layoutManager =
             LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
     }
 
     private fun moreUi() {
-        val data = arrayListOf(
+        val data = listOf(
             MoreUiData(
                 title = "اطلاعات طوریستی کشور های جهان",
                 desc = "دور دنیا در 10 دقیقه",
@@ -137,12 +131,10 @@ class ProfileFragment(private val mContext: Context) : Fragment(), ScienceEvents
                         "(مشترك المنافع) استرالیا (Australia of Commonwealth (کشوري اسـت در ن یمکـره",
                 coverImageUrl = "https://ketabha.org/wp-content/uploads/2017/10/australia.jpg",
                 pdfUrl = "https://www.ketabha.org/wp-content/uploads/2017/10/Austorolliaketabha.org_.pdf"
-            ),
+            )
         )
-        moreDao.insertAllMore(data)
 
-        val bookData = moreDao.getAllMoreBooks()
-        val moreAdapter = MoreAdapter(ArrayList(bookData), this)
+        val moreAdapter = MoreAdapter(ArrayList(data), this)
         binding.recyclerHistory.adapter = moreAdapter
         binding.recyclerHistory.layoutManager =
             LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
@@ -169,10 +161,8 @@ class ProfileFragment(private val mContext: Context) : Fragment(), ScienceEvents
                 pdfUrl = "https://www.ketabha.org/wp-content/uploads/2017/01/ashnayy_ba_kshvrhawww.ketabha.org_.pdf"
             )
         )
-        scienceDao.insertAllScience(data)
 
-        val bookData = scienceDao.getAllScienceBooks()
-        val scienceAdapter = ScienceAdapter(ArrayList(bookData), this)
+        val scienceAdapter = ScienceAdapter(ArrayList(data), this)
         binding.recycerScience.adapter = scienceAdapter
         binding.recycerScience.layoutManager =
             LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)

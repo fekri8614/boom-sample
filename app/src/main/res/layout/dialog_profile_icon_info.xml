@@ -18,7 +18,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="It shows how many books you have read"
+            android:text="@string/dialog_profile_message"
             style="@style/CoinBitText.TitleAlternate"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
