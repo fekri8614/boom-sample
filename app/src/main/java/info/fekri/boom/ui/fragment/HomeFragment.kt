@@ -26,7 +26,7 @@ import info.fekri.boom.ui.activity.ShowPdfActivity
 import info.fekri.boom.ux.adapter.BookRVAdapter
 import info.fekri.boom.ux.data.BookRvModel
 
-class HomeFragment() : Fragment(), OnClickListener {
+class HomeFragment() : Fragment() {
     private lateinit var binding: FragmentHomeBinding
 
     override fun onCreateView(
@@ -47,23 +47,7 @@ class HomeFragment() : Fragment(), OnClickListener {
     }
 
     private fun openPdfEvent() {
-        binding.itemImaginationHome.matCardImagin1.setOnClickListener(this)
-        binding.itemImaginationHome.matCardImagin2.setOnClickListener(this)
-
-        binding.itemScientificHome.matCardScientific.setOnClickListener(this)
-    }
-    override fun onClick(v: View?) {
-        when(v!!.id) {
-            R.id.mat_card_imagin1 -> { sendPdfToOpen("tejus-shadow_fa.pdf") }
-            R.id.mat_card_imagin2 -> { sendPdfToOpen("and-also-fa.pdf") }
-
-            R.id.mat_card_scientific -> { sendPdfToOpen("my-inside-weather_fa.pdf") }
-        }
-    }
-    private fun sendPdfToOpen(assName: String) {
-        val intent = Intent(activity, ShowPdfActivity::class.java)
-        intent.putExtra(KEY_SEND_PDF_FILE, assName)
-        startActivity(intent)
+        // pdf-show process
     }
 
     private fun topIconsEvent() {

@@ -2,6 +2,10 @@ package info.fekri.boom.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MotionEvent
+import androidx.core.view.MotionEventCompat
+import com.rajat.pdfviewer.PdfEngine
+import com.rajat.pdfviewer.PdfQuality
 import info.fekri.boom.databinding.ActivityShowPdfBinding
 import info.fekri.boom.extra.KEY_SEND_PDF_FILE
 
@@ -12,15 +16,9 @@ class ShowPdfActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityShowPdfBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        val data = intent.getStringExtra(KEY_SEND_PDF_FILE)
-        if (data != null) showPdf(data)
+        /*
+        * Show PDF
+        * */
     }
 
-    private fun showPdf(pdfName: String) {
-        val pdfContainer = binding.pdfContainer.fromAsset(pdfName)
-        pdfContainer.isVerticalScrollBarEnabled = false
-        pdfContainer.isHorizontalScrollBarEnabled = true
-        pdfContainer.show()
-    }
 }
