@@ -1,6 +1,6 @@
 package info.fekri.boom.ux.retrofit
 
-import info.fekri.boom.extra.BASE_URL
+import info.fekri.boom.extra.BASE_URL_HEROES
 import info.fekri.boom.ux.retrofit.models.HeroesData
 import retrofit2.Call
 import retrofit2.Callback
@@ -14,7 +14,7 @@ class ApiManager {
     init {
         val retrofit = Retrofit
             .Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(BASE_URL_HEROES)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
@@ -22,7 +22,6 @@ class ApiManager {
     }
 
     fun getHeroes(apiCallback: ApiCallback<ArrayList<HeroesData.HeroesDataItem>>) {
-
         apiService.getHeroes().enqueue(object : Callback<HeroesData> {
             override fun onResponse(
                 call: Call<HeroesData>,
@@ -40,7 +39,6 @@ class ApiManager {
                 apiCallback.onError(t.message!!)
             }
         })
-
     }
 
     interface ApiCallback<T> {

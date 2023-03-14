@@ -61,6 +61,7 @@ class BookRVAdapter(
             intent.putExtra("previewLink", bookInfo.previewLink)
             intent.putExtra("infoLink", bookInfo.infoLink)
             intent.putExtra("buyLink", bookInfo.buyLink)
+            intent.putExtra("pdfLink", bookInfo.pdfLink)
 
             ctx.startActivity(intent)
 

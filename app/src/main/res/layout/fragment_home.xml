@@ -133,20 +133,19 @@
             android:background="@color/grey_custom" />
 
         <!--    CENTER part is here    -->
-
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/space_20x"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatTextView
+                style="@style/CoinBitText.Body3.Dark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/for_you_free"
-                style="@style/CoinBitText.Body3.Dark"/>
+                android:text="@string/for_you_free" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="wrap_content"
@@ -163,7 +162,14 @@
             android:orientation="vertical"
             android:padding="@dimen/space_4x">
 
-            <LinearLayout
+            <ProgressBar
+                android:id="@+id/progress_load_home"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/linear_first_home"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -184,15 +190,19 @@
                     android:layout_height="wrap_content"
                     android:padding="@dimen/space_8x">
 
-                    <include
-                        android:id="@+id/item_imagination_home"
-                        layout="@layout/module_imagination_home" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_show_imagine_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        tools:itemCount="1"
+                        tools:listitem="@layout/item_books" />
 
                 </androidx.core.widget.NestedScrollView>
 
-            </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/linear_first_home"
@@ -213,13 +223,17 @@
                     android:layout_height="wrap_content"
                     android:padding="@dimen/space_8x">
 
-                    <include
-                        android:id="@+id/item_scientific_home"
-                        layout="@layout/module_scientific_home"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_show_scientific_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        tools:itemCount="1"
+                        tools:listitem="@layout/item_books" />
 
                 </androidx.core.widget.NestedScrollView>
 
-            </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
         </RelativeLayout>
 

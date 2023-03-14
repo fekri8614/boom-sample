@@ -99,6 +99,7 @@ class BooksFragment : Fragment() {
                     val saleInfoObj = itemsObj.optJSONObject("saleInfo")
                     val buyLink = saleInfoObj.optString("buyLink")
                     val authorsArrayList: ArrayList<String> = ArrayList()
+                    val pdfLink = itemsObj.optJSONObject("accessInfo")?.optString("pdfLink")
                     if (authorsArray.length() != 0) {
                         for (j in 0 until authorsArray.length()) {
                             authorsArrayList.add(authorsArray.optString(i))
@@ -117,7 +118,8 @@ class BooksFragment : Fragment() {
                         thumbnail,
                         previewLink,
                         infoLink,
-                        buyLink
+                        buyLink,
+                        pdfLink
                     )
 
                     // pass model in our array list
@@ -140,13 +142,12 @@ class BooksFragment : Fragment() {
 
         }, { error ->
             // show toast if something went wrong
+            Log.v("boomLog", error.message.toString())
             Toast.makeText(
                 requireContext().applicationContext,
                 "No book found!",
                 Toast.LENGTH_SHORT
             ).show()
-
-            Log.v("boomLog", error.message.toString())
         })
 
         // at last, add request to the queue
