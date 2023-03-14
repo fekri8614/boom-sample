@@ -9,4 +9,3 @@ const val API_HOST_HEROES = "X-RapidAPI-Host: superhero-search.p.rapidapi.com"
 
 // KEY -->
 const val KEY_SEND_DATA_TO_SHOW = "send_buyData_to_ShowHeroesActivity"
-const val KEY_SEND_PDF_FILE = "key_send_pdf_file_to_show"
