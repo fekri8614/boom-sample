@@ -7,7 +7,11 @@
 ---
 
 #### ✔ About:
-Boom is an application to read and search about books.
+Boom is an application to read and search about books. This app is online. Used [Google Photos API](https://developers.google.com/photos) and [Super Hero Search](https://rapidapi.com/jakash1997/api/superhero-search/)
+
+### To use [Google Photos Api](https://developers.google.com/photos) -> Guides > Overview or *[here](https://developers.google.com/photos/library/guides/overview)*.
+
+---
 
 #### 👌 Developed with:
   * Kotlin
