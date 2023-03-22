@@ -28,17 +28,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/space_16x"
-                android:clickable="true"
-                android:focusable="true"
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <de.hdodenhof.circleimageview.CircleImageView
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:elevation="@dimen/space_2x"
-                    android:padding="@dimen/space_8x"
-                    android:src="@drawable/img_libray" />
+                    android:layout_margin="@dimen/space_4x"
+                    app:cardCornerRadius="128dp"
+                    app:cardElevation="@dimen/space_4x"
+                    app:strokeColor="@color/yellow_back"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:strokeWidth="1dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/img_libray" />
+
+                </com.google.android.material.card.MaterialCardView>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     style="@style/CoinBitText.TitleAlternate"
@@ -53,17 +63,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/space_16x"
-                android:clickable="true"
-                android:focusable="true"
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <de.hdodenhof.circleimageview.CircleImageView
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:elevation="@dimen/space_2x"
-                    android:padding="@dimen/space_8x"
-                    android:src="@drawable/img_audio_lib" />
+                    android:layout_margin="@dimen/space_4x"
+                    app:cardCornerRadius="128dp"
+                    app:cardElevation="@dimen/space_4x"
+                    app:strokeColor="@color/yellow_back"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:strokeWidth="1dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/img_audio_lib" />
+
+                </com.google.android.material.card.MaterialCardView>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     style="@style/CoinBitText.TitleAlternate"
@@ -78,17 +98,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/space_16x"
-                android:clickable="true"
-                android:focusable="true"
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <de.hdodenhof.circleimageview.CircleImageView
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:elevation="@dimen/space_2x"
-                    android:padding="@dimen/space_8x"
-                    android:src="@drawable/img_watch_list" />
+                    android:layout_margin="@dimen/space_4x"
+                    app:cardCornerRadius="128dp"
+                    app:cardElevation="@dimen/space_4x"
+                    app:strokeColor="@color/yellow_back"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:strokeWidth="1dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/img_watch_list" />
+
+                </com.google.android.material.card.MaterialCardView>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     style="@style/CoinBitText.TitleAlternate"
@@ -102,17 +132,27 @@
                 android:id="@+id/item_libraryAll_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:clickable="true"
-                android:focusable="true"
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <de.hdodenhof.circleimageview.CircleImageView
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:elevation="@dimen/space_2x"
-                    android:padding="@dimen/space_8x"
-                    android:src="@drawable/img_all" />
+                    android:layout_margin="@dimen/space_4x"
+                    app:cardCornerRadius="128dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardElevation="@dimen/space_4x"
+                    app:strokeColor="@color/yellow_back"
+                    app:strokeWidth="1dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/img_all" />
+
+                </com.google.android.material.card.MaterialCardView>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     style="@style/CoinBitText.TitleAlternate"
@@ -164,10 +204,10 @@
 
             <ProgressBar
                 android:id="@+id/progress_load_home"
-                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"/>
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/linear_first_home"

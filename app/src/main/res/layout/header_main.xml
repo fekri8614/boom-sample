@@ -34,7 +34,7 @@
             app:layout_constraintBottom_toTopOf="@+id/textView2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:strokeColor="@color/grey_custom"
+            app:strokeColor="@color/yellow_back"
             app:strokeWidth="2dp">
 
             <androidx.appcompat.widget.AppCompatImageView

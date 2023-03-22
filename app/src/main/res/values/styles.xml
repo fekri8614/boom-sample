@@ -21,6 +21,22 @@
 
     </style>
 
+    <!--  Neumorphism UI  -->
+    <style name="NeumorphismImage">
+        <item name="neumorph_cornerFamily">rounded</item>
+        <item name="neumorph_cornerSize">30dp</item>
+    </style>
+
+    <style name="NeumorphiamCard">
+        <item name="neumorph_cornerFamily">rounded</item>
+        <item name="neumorph_cornerSize">10dp</item>
+    </style>
+
+    <style name="NeumorphiamButton">
+        <item name="neumorph_cornerFamily">rounded</item>
+        <item name="neumorph_cornerSize">2dp</item>
+    </style>
+
     <!--  Customize your PdfViewer here  -->
     <style name="Theme.PdfView.SelectedTheme" parent="@style/Theme.PdfView.Light">
 
