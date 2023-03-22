@@ -20,4 +20,9 @@
 
     <color name="background_main">#F8F2E4</color>
     <color name="yellow_back">#E8BC15</color>
+
+    <color name="new_background">#1A1A1A</color>
+    <color name="new_shadow1">#B3000000</color>
+    <color name="new_shadow2">#B33A3A3A</color>
+
 </resources>
