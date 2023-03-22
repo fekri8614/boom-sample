@@ -16,7 +16,7 @@ data class ScienceData(
     val coverImageUrl: String,
     val pdfUrl: String
 
-):Parcelable
+) : Parcelable
 
 @Parcelize
 @Entity("table_more")
@@ -29,7 +29,7 @@ data class MoreUiData(
     val coverImageUrl: String,
     val pdfUrl: String
 
-):Parcelable
+) : Parcelable
 
 @Parcelize
 @Entity("table_poems")
@@ -42,7 +42,7 @@ data class PoemsUiData(
     val coverImageUrl: String,
     val pdfUrl: String
 
-):Parcelable
+) : Parcelable
 
 // variables for our book details
 // BooksFragment Recycler variables
@@ -60,5 +60,23 @@ data class BookRvModel(
     var infoLink: String,
     var buyLink: String,
     var pdfLink: String?
-): Parcelable
+) : Parcelable
 
+// -----------------------------------------------------------------------------------
+data class BookInfo(
+    val title: String,
+    val authors: List<String>,
+    val publisher: String,
+    val publishedDate: String,
+    val description: String,
+    val pageCount: Int,
+    val categories: List<String>,
+    val imageLinks: ImageLinks,
+    val previewLink: String,
+    val pdfLink: String,
+)
+
+data class ImageLinks(
+    val smallThumbnail: String,
+    val thumbnail: String
+)
