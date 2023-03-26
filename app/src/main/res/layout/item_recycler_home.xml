@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="140dp"
-    android:layout_height="160dp"
-    android:layout_marginStart="@dimen/space_4x"
-    android:layout_marginEnd="@dimen/space_4x"
-    app:cardCornerRadius="@dimen/space_8x"
-    android:elevation="0dp"
-    app:strokeWidth="@dimen/space_2x"
-    app:strokeColor="@color/yellow_back">
+    android:layout_width="100dp"
+    android:layout_height="135dp"
+    android:layout_margin="@dimen/space_8x"
+    app:cardCornerRadius="@dimen/space_16x"
+    app:cardElevation="@dimen/space_4x"
+    app:strokeColor="@color/yellow_back"
+    app:strokeWidth="1dp">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/img_recycler_home"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:srcCompat="@drawable/imh_bc_test" />
 
 </com.google.android.material.card.MaterialCardView>

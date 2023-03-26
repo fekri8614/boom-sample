@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.fragment.HeroesFragment">
+    tools:context=".moreUi.fragments.HeroesFragment">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipe_refresh_main"
@@ -21,7 +21,7 @@
                 android:layout_height="0dp"
                 android:orientation="vertical"
                 android:padding="@dimen/space_8x"
-                tools:context=".ui.fragment.HeroesFragment">
+                tools:context=".moreUi.fragments.HeroesFragment">
 
                 <include
                     android:id="@+id/item_module_main_buy"

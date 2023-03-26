@@ -1,4 +1,4 @@
-package info.fekri.boom.ux.adapter
+package info.fekri.boom.books
 
 import android.content.Context
 import android.content.Intent
@@ -6,29 +6,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.AppCompatImageView
-import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import info.fekri.boom.R
-import info.fekri.boom.databinding.ItemBooksBinding
-import info.fekri.boom.ui.activity.BookDetailsActivity
-import info.fekri.boom.ux.data.BookRvModel
+import info.fekri.boom.databinding.ItemRecyclerHomeBinding
+import info.fekri.boom.model.data.BookRvModel
 
 class BookRVAdapter(
     private var bookList: ArrayList<BookRvModel>,
     private var ctx: Context
 ) : RecyclerView.Adapter<BookRVAdapter.BookViewHolder>() {
-    private lateinit var binding: ItemBooksBinding
+    private lateinit var binding: ItemRecyclerHomeBinding
 
     inner class BookViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val bookTitle: AppCompatTextView = binding.idTvBookName
-        val bookPages: AppCompatTextView = binding.idTVBookPages
-        val bookIV: AppCompatImageView = binding.idIVBook
+        val bookIV: AppCompatImageView = binding.imgRecyclerHome
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        binding = ItemBooksBinding.inflate(inflater, parent, false)
+        binding = ItemRecyclerHomeBinding.inflate(inflater, parent, false)
         return BookViewHolder(binding.root)
     }
 
@@ -42,8 +38,6 @@ class BookRVAdapter(
             .load(bookInfo.thumbnail)
             .error(R.drawable.broken_img)
             .into(holder.bookIV)
-        holder.bookTitle.text = bookInfo.title
-        holder.bookPages.text = "Page: ${bookInfo.pageCount}"
 
         holder.itemView.setOnLongClickListener {
 

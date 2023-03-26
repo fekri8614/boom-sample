@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
     android:background="@color/background_main"
     android:orientation="vertical"
-    android:padding="@dimen/space_8x"
-    tools:context=".ui.fragment.HomeFragment">
+    tools:context=".mainUi.fragments.HomeFragment">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/space_20x"
+        android:layout_marginTop="@dimen/space_10x"
         android:gravity="bottom"
+        android:padding="@dimen/space_4x"
         android:orientation="vertical">
 
         <!--    TOP part is here    -->
@@ -21,49 +21,68 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:layout_marginTop="@dimen/space_10x"
             android:orientation="horizontal">
 
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/item_library_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/space_16x"
-                android:clickable="true"
-                android:focusable="true"
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:elevation="@dimen/space_2x"
-                    android:padding="@dimen/space_8x"
-                    android:src="@drawable/img_libray" />
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/item_libraryAll_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/space_4x"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="@dimen/space_128x"
+                    app:cardElevation="@dimen/space_4x"
+                    app:strokeColor="@color/yellow_back"
+                    app:strokeWidth="1dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        app:srcCompat="@drawable/img_all" />
+
+                </com.google.android.material.card.MaterialCardView>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     style="@style/CoinBitText.TitleAlternate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/library" />
+                    android:text="@string/all" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/item_libraryAudio_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/space_16x"
-                android:clickable="true"
-                android:focusable="true"
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:elevation="@dimen/space_2x"
-                    android:padding="@dimen/space_8x"
-                    android:src="@drawable/img_audio_lib" />
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/item_libraryAudio_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/space_4x"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="@dimen/space_128x"
+                    app:cardElevation="@dimen/space_4x"
+                    app:strokeColor="@color/yellow_back"
+                    app:strokeWidth="1dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        app:srcCompat="@drawable/img_audio_lib" />
+
+                </com.google.android.material.card.MaterialCardView>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     style="@style/CoinBitText.TitleAlternate"
@@ -74,21 +93,30 @@
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/item_libraryWatch_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/space_16x"
-                android:clickable="true"
-                android:focusable="true"
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:elevation="@dimen/space_2x"
-                    android:padding="@dimen/space_8x"
-                    android:src="@drawable/img_watch_list" />
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/item_libraryWatch_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/space_4x"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="@dimen/space_128x"
+                    app:cardElevation="@dimen/space_4x"
+                    app:strokeColor="@color/yellow_back"
+                    app:strokeWidth="1dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        app:srcCompat="@drawable/img_watch_list" />
+
+                </com.google.android.material.card.MaterialCardView>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     style="@style/CoinBitText.TitleAlternate"
@@ -99,26 +127,35 @@
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/item_libraryAll_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:clickable="true"
-                android:focusable="true"
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:elevation="@dimen/space_2x"
-                    android:padding="@dimen/space_8x"
-                    android:src="@drawable/img_all" />
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/item_library_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/space_4x"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="@dimen/space_128x"
+                    app:cardElevation="@dimen/space_4x"
+                    app:strokeColor="@color/yellow_back"
+                    app:strokeWidth="1dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        app:srcCompat="@drawable/img_library_all" />
+
+                </com.google.android.material.card.MaterialCardView>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     style="@style/CoinBitText.TitleAlternate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/all" />
+                    android:text="@string/library" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -159,81 +196,103 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/space_20x"
             android:gravity="center"
-            android:orientation="vertical"
-            android:padding="@dimen/space_4x">
+            android:orientation="vertical">
 
             <ProgressBar
                 android:id="@+id/progress_load_home"
-                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"/>
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
 
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/linear_first_home"
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_first_home"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:orientation="vertical"
-                android:padding="@dimen/space_4x">
+                android:layout_marginStart="@dimen/space_4x"
+                android:layout_marginTop="@dimen/space_10x"
+                android:layout_marginEnd="@dimen/space_4x"
+                app:cardCornerRadius="@dimen/space_14x"
+                app:cardElevation="0dp">
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    style="@style/CoinBitText.Title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/imagination" />
-
-                <androidx.core.widget.NestedScrollView
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/space_8x">
+                    android:background="@color/green_back"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_4x">
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recycler_show_imagine_home"
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/CoinBitText.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/imagination" />
+
+                    <androidx.core.widget.NestedScrollView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        tools:itemCount="1"
-                        tools:listitem="@layout/item_books" />
+                        android:padding="@dimen/space_4x">
 
-                </androidx.core.widget.NestedScrollView>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_show_imagine_home"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            tools:itemCount="1"
+                            tools:listitem="@layout/item_recycler_home" />
 
-            </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.core.widget.NestedScrollView>
 
-            <androidx.appcompat.widget.LinearLayoutCompat
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/linear_first_home"
                 android:layout_alignParentStart="true"
+                android:layout_below="@id/card_first_home"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="@dimen/space_20x"
-                android:orientation="vertical"
-                android:padding="@dimen/space_4x">
+                android:layout_marginStart="@dimen/space_4x"
+                android:layout_marginTop="@dimen/space_10x"
+                android:layout_marginEnd="@dimen/space_4x"
+                app:cardCornerRadius="@dimen/space_14x"
+                app:cardElevation="0dp">
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    style="@style/CoinBitText.Title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/science" />
-
-                <androidx.core.widget.NestedScrollView
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/space_8x">
+                    android:background="@color/blue_back"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_4x">
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recycler_show_scientific_home"
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/CoinBitText.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/science" />
+
+                    <androidx.core.widget.NestedScrollView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        tools:itemCount="1"
-                        tools:listitem="@layout/item_books" />
+                        android:padding="@dimen/space_4x">
 
-                </androidx.core.widget.NestedScrollView>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_show_scientific_home"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            tools:itemCount="1"
+                            tools:listitem="@layout/item_recycler_home" />
 
-            </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.core.widget.NestedScrollView>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </com.google.android.material.card.MaterialCardView>
 
         </RelativeLayout>
 

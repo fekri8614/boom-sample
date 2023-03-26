@@ -9,4 +9,6 @@
     <dimen name="space_20x">20dp</dimen>
     <dimen name="space_24x">24dp</dimen>
     <dimen name="space_28x">28dp</dimen>
+    <dimen name="space_128x">128dp</dimen>
+    <dimen name="space_48x">48dp</dimen>
 </resources>

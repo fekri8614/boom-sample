@@ -1,4 +1,4 @@
-package info.fekri.boom.ui.activity
+package info.fekri.boom.mainUi
 
 import android.app.AlertDialog
 import android.content.Context
@@ -15,10 +15,10 @@ import info.fekri.boom.databinding.ActivityMainBinding
 import info.fekri.boom.databinding.ItemDialogShowWelcomeBinding
 import info.fekri.boom.databinding.ItemReadMoreDialogBinding
 import info.fekri.boom.extra.openWebsite
-import info.fekri.boom.ui.fragment.BooksFragment
-import info.fekri.boom.ui.fragment.HeroesFragment
-import info.fekri.boom.ui.fragment.HomeFragment
-import info.fekri.boom.ui.fragment.ProfileFragment
+import info.fekri.boom.mainUi.fragments.BooksFragment
+import info.fekri.boom.moreUi.fragments.HeroesFragment
+import info.fekri.boom.mainUi.fragments.HomeFragment
+import info.fekri.boom.mainUi.fragments.ProfileFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

@@ -1,9 +1,9 @@
 package info.fekri.boom.extra
 
-import info.fekri.boom.ux.data.MoreUiData
-import info.fekri.boom.ux.data.PoemsUiData
-import info.fekri.boom.ux.data.ScienceData
-import info.fekri.boom.ux.retrofit.models.HeroesData
+import info.fekri.boom.model.data.MoreUiData
+import info.fekri.boom.model.data.PoemsUiData
+import info.fekri.boom.model.data.ScienceData
+import info.fekri.boom.model.data.HeroesData
 
 interface ScienceEvents {
 

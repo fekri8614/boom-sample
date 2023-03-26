@@ -1,4 +1,4 @@
-package info.fekri.boom.ux.adapter
+package info.fekri.boom.mainUi.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +8,7 @@ import com.bumptech.glide.Glide
 import info.fekri.boom.R
 import info.fekri.boom.databinding.ItemRecyclerHomeBinding
 import info.fekri.boom.extra.MoreUiEvents
-import info.fekri.boom.ux.data.MoreUiData
+import info.fekri.boom.model.data.MoreUiData
 
 class MoreAdapter(private val data: ArrayList<MoreUiData>, private val itemEvents: MoreUiEvents) :
     RecyclerView.Adapter<MoreAdapter.HistoryViewHolder>() {

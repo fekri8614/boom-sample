@@ -1,4 +1,4 @@
-package info.fekri.boom.ux.adapter
+package info.fekri.boom.mainUi.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,18 +7,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import info.fekri.boom.R
 import info.fekri.boom.databinding.ItemRecyclerHomeBinding
-import info.fekri.boom.extra.PoemsUiEvents
-import info.fekri.boom.ux.data.PoemsUiData
+import info.fekri.boom.extra.ScienceEvents
+import info.fekri.boom.model.data.ScienceData
 
-class PoemsAdapter(
-    private val data: ArrayList<PoemsUiData>,
-    private val itemEvents: PoemsUiEvents
-) :
-    RecyclerView.Adapter<PoemsAdapter.PoemsViewHolder>() {
+class ScienceAdapter(private val data: ArrayList<ScienceData>, private val itemEvents: ScienceEvents) :
+    RecyclerView.Adapter<ScienceAdapter.ScienceViewHolder>() {
     private lateinit var binding: ItemRecyclerHomeBinding
 
-    inner class PoemsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bindViews(itemBook: PoemsUiData) {
+    inner class ScienceViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun bindViews(itemBook: ScienceData) {
 
             Glide
                 .with(itemView.context)
@@ -27,23 +24,26 @@ class PoemsAdapter(
                 .into(binding.imgRecyclerHome)
 
             itemView.setOnClickListener {
-                itemEvents.onPoemsUiItemClicked(itemBook)
+                itemEvents.onScienceItemClicked(itemBook)
             }
+
             itemView.setOnLongClickListener {
-                itemEvents.onPoemsUiItemLongClicked(itemBook)
+                itemEvents.onScienceItemLongClicked(itemBook)
                 true
             }
+
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PoemsViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ScienceViewHolder {
         binding =
             ItemRecyclerHomeBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return PoemsViewHolder(binding.root)
+        return ScienceViewHolder(binding.root)
     }
+
     override fun getItemCount(): Int = data.size
-    override fun onBindViewHolder(holder: PoemsViewHolder, position: Int) {
+
+    override fun onBindViewHolder(holder: ScienceViewHolder, position: Int) =
         holder.bindViews(data[position])
-    }
 
 }
