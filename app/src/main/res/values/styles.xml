@@ -100,7 +100,7 @@
 
     <style name="CoinBitText.BodyAlternate.Small" parent="CoinBitText">
         <item name="android:textColor">@color/tertiaryTextColor</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">12sp</item>
     </style>
 
     <style name="CoinBitText.BodyTertiary" parent="CoinBitText">

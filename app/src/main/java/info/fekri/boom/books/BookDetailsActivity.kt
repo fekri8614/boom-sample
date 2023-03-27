@@ -5,9 +5,9 @@ import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
-import com.google.android.material.button.MaterialButton
 import com.rajat.pdfviewer.PdfViewerActivity
 import com.squareup.picasso.Picasso
 import info.fekri.boom.R
@@ -23,9 +23,9 @@ class BookDetailsActivity : AppCompatActivity() {
     private lateinit var descTV: AppCompatTextView
     private lateinit var pageTV: AppCompatTextView
     private lateinit var publisherDate: AppCompatTextView
-    private lateinit var previewBtn: MaterialButton
-    private lateinit var buyBtn: MaterialButton
-    private lateinit var pdfBtn: MaterialButton
+    private lateinit var previewBtn: AppCompatButton
+    private lateinit var buyBtn: AppCompatButton
+    private lateinit var pdfBtn: AppCompatButton
     private lateinit var bookIV: AppCompatImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
