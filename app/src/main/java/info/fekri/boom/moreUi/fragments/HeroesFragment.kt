@@ -1,4 +1,4 @@
-package info.fekri.boom.ui.fragment
+package info.fekri.boom.moreUi.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -13,10 +13,10 @@ import androidx.recyclerview.widget.RecyclerView
 import info.fekri.boom.databinding.FragmentHeroesBinding
 import info.fekri.boom.extra.HeroesEvent
 import info.fekri.boom.extra.KEY_SEND_DATA_TO_SHOW
-import info.fekri.boom.ui.activity.ShowHeroesActivity
-import info.fekri.boom.ux.adapter.HeroesAdapter
-import info.fekri.boom.ux.retrofit.ApiManager
-import info.fekri.boom.ux.retrofit.models.HeroesData
+import info.fekri.boom.moreUi.ShowHeroesActivity
+import info.fekri.boom.moreUi.HeroesAdapter
+import info.fekri.boom.model.retrofit.ApiManager
+import info.fekri.boom.model.data.HeroesData
 
 class HeroesFragment() : Fragment(), HeroesEvent {
     private lateinit var binding: FragmentHeroesBinding

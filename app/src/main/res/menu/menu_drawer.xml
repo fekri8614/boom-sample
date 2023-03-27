@@ -10,7 +10,7 @@
         android:icon="@drawable/ic_read_more"
         android:title="@string/read_more" />
 
-    <item android:title="@string/heroes">
+    <item android:title="@string/game">
 
         <menu>
 

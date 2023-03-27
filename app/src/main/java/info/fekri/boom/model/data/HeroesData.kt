@@ -1,5 +1,4 @@
-package info.fekri.boom.ux.retrofit.models
-
+package info.fekri.boom.model.data
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName

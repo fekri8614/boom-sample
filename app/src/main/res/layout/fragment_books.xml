@@ -1,58 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:background="@color/background_main"
+    android:padding="@dimen/space_8x"
     android:orientation="vertical"
-    tools:context=".ui.fragment.BooksFragment">
+    tools:context=".mainUi.fragments.BooksFragment">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/idLLSearch"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cover_icon_app_books"
+        android:layout_width="160dp"
+        android:layout_height="140dp"
+        app:cardCornerRadius="@dimen/space_48x"
+        app:strokeColor="@color/yellow_back"
+        app:strokeWidth="@dimen/space_2x"
+        app:cardElevation="@dimen/space_4x"
+        android:layout_marginTop="@dimen/space_8x"
+        android:backgroundTint="@android:color/transparent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/main_icon"
+            android:padding="@dimen/space_16x"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="@dimen/space_8x"
+        android:id="@+id/cover_edt_profile"
+        app:cardCornerRadius="@dimen/space_16x"
+        app:cardElevation="@dimen/space_4x"
         android:layout_marginTop="@dimen/space_20x"
-        android:layout_marginEnd="@dimen/space_8x"
-        android:background="@drawable/back_search"
-        android:orientation="horizontal"
-        android:weightSum="5">
+        android:layout_marginEnd="@dimen/space_16x"
+        android:layout_marginStart="@dimen/space_16x"
+        app:strokeWidth="@dimen/space_2x"
+        app:strokeColor="@color/yellow_back">
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/idEdtSearchBooks"
-            android:layout_width="0dp"
-            android:layout_height="?attr/actionBarSize"
-            android:layout_weight="4"
-            android:backgroundTint="@color/white"
-            android:hint="@string/search_message"
-            android:padding="@dimen/space_8x" />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/idLLSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
 
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/idBtnSearch"
-            android:layout_width="0dp"
-            android:layout_height="?attr/actionBarSize"
-            android:layout_weight="1"
-            android:backgroundTint="@color/white"
-            android:src="@drawable/ic_search" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/idEdtSearchBooks"
+                android:layout_width="0dp"
+                android:singleLine="true"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_weight="4"
+                android:backgroundTint="@color/white"
+                android:hint="@string/search_message"
+                style="@style/CoinBitText.Title"
+                android:padding="@dimen/space_16x" />
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/idBtnSearch"
+                android:layout_width="0dp"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/ic_search" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/idRvBooks"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/idLLSearch"
+        android:layout_below="@id/cover_edt_profile"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="@dimen/space_20x"
-        android:padding="@dimen/space_4x"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        tools:listitem="@layout/item_books" />
+        tools:listitem="@layout/item_recycler_home" />
 
     <ProgressBar
         android:id="@+id/idLoadingPB"
@@ -61,4 +91,4 @@
         android:layout_centerInParent="true"
         android:visibility="gone" />
 
-</RelativeLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

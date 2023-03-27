@@ -1,4 +1,4 @@
-package info.fekri.boom.ui.activity
+package info.fekri.boom.pdf
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

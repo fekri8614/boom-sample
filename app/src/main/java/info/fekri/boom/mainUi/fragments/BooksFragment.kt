@@ -1,4 +1,4 @@
-package info.fekri.boom.ui.fragment
+package info.fekri.boom.mainUi.fragments
 
 import android.os.Bundle
 import android.util.Log
@@ -16,8 +16,8 @@ import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import info.fekri.boom.databinding.FragmentBooksBinding
-import info.fekri.boom.ux.adapter.BookRVAdapter
-import info.fekri.boom.ux.data.BookRvModel
+import info.fekri.boom.books.BookRVAdapter
+import info.fekri.boom.model.data.BookRvModel
 
 class BooksFragment : Fragment() {
     private lateinit var binding: FragmentBooksBinding
@@ -76,7 +76,11 @@ class BooksFragment : Fragment() {
         val queue = Volley.newRequestQueue(requireContext())
 
         // create a variable for request and initialize it
-        val request = JsonObjectRequest(Request.Method.GET, url, null, { response ->
+        val request = JsonObjectRequest(
+            Request.Method.GET,
+            url,
+            null,
+            { response ->
             loadingPB.visibility = View.GONE
 
             // inside response method we are extracting all json data
@@ -92,12 +96,16 @@ class BooksFragment : Fragment() {
                     val publishedDate = volumeObj.optString("publishedDate")
                     val description = volumeObj.optString("description")
                     val pageCount = volumeObj.optInt("pageCount")
+
                     val imageLinks = volumeObj.optJSONObject("imageLinks")
-                    val thumbnail = imageLinks.optString("thumbnail")
+                    val thumbnail = imageLinks!!.optString("thumbnail")
+
                     val previewLink = volumeObj.optString("previewLink")
                     val infoLink = volumeObj.optString("infoLink")
                     val saleInfoObj = itemsObj.optJSONObject("saleInfo")
-                    val buyLink = saleInfoObj.optString("buyLink")
+
+                    val buyLink = saleInfoObj!!.optString("buyLink")
+
                     val authorsArrayList: ArrayList<String> = ArrayList()
                     val pdfLink = itemsObj.optJSONObject("accessInfo")?.optString("pdfLink")
                     if (authorsArray.length() != 0) {

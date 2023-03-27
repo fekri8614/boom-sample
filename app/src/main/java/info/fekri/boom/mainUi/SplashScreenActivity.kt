@@ -1,4 +1,4 @@
-package info.fekri.boom.ui.activity
+package info.fekri.boom.mainUi
 
 import android.content.Intent
 import android.os.Bundle

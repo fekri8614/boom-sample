@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".ui.activity.ShowPdfActivity">
+    tools:context=".pdf.ShowPdfActivity">
 
     <com.rajat.pdfviewer.PdfRendererView
         android:id="@+id/pdf_container"

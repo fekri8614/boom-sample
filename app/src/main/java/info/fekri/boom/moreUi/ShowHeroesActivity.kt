@@ -1,4 +1,4 @@
-package info.fekri.boom.ui.activity
+package info.fekri.boom.moreUi
 
 import android.os.Bundle
 import android.util.Log
@@ -9,7 +9,7 @@ import com.bumptech.glide.Glide
 import info.fekri.boom.R
 import info.fekri.boom.databinding.ActivityShowHeroesBinding
 import info.fekri.boom.extra.KEY_SEND_DATA_TO_SHOW
-import info.fekri.boom.ux.retrofit.models.HeroesData
+import info.fekri.boom.model.data.HeroesData
 
 class ShowHeroesActivity : AppCompatActivity() {
     private lateinit var binding: ActivityShowHeroesBinding

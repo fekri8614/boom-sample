@@ -1,4 +1,4 @@
-package info.fekri.boom.ui.fragment
+package info.fekri.boom.mainUi.fragments
 
 import android.content.Context
 import android.os.Bundle
@@ -17,12 +17,12 @@ import info.fekri.boom.databinding.FragmentProfileBinding
 import info.fekri.boom.extra.MoreUiEvents
 import info.fekri.boom.extra.PoemsUiEvents
 import info.fekri.boom.extra.ScienceEvents
-import info.fekri.boom.ux.adapter.MoreAdapter
-import info.fekri.boom.ux.adapter.PoemsAdapter
-import info.fekri.boom.ux.adapter.ScienceAdapter
-import info.fekri.boom.ux.data.MoreUiData
-import info.fekri.boom.ux.data.PoemsUiData
-import info.fekri.boom.ux.data.ScienceData
+import info.fekri.boom.mainUi.adapter.MoreAdapter
+import info.fekri.boom.mainUi.adapter.PoemsAdapter
+import info.fekri.boom.mainUi.adapter.ScienceAdapter
+import info.fekri.boom.model.data.MoreUiData
+import info.fekri.boom.model.data.PoemsUiData
+import info.fekri.boom.model.data.ScienceData
 
 class ProfileFragment(mContext: Context) : Fragment(), ScienceEvents, MoreUiEvents,
     PoemsUiEvents {
@@ -56,7 +56,7 @@ class ProfileFragment(mContext: Context) : Fragment(), ScienceEvents, MoreUiEven
     }
 
     private fun setProfileIcon() {
-        binding.icEditImgUser.setOnClickListener { setImageFromGallery() }
+        binding.cardCoverImgProfile.setOnClickListener { setImageFromGallery() }
     }
 
     private fun setImageFromGallery() {
@@ -69,7 +69,7 @@ class ProfileFragment(mContext: Context) : Fragment(), ScienceEvents, MoreUiEven
 
     private fun readBookIcon() {
         /* Show a dialog and close it after 3 seconds */
-        binding.itemIconTopReader.setOnClickListener {
+        binding.cardCoverSignProfile.setOnClickListener {
             val dialog = AlertDialog.Builder(requireContext()).create()
             val dialogBinding = DialogProfileIconInfoBinding.inflate(layoutInflater)
             dialog.setView(dialogBinding.root)

@@ -1,4 +1,4 @@
-package info.fekri.boom.ux.adapter
+package info.fekri.boom.moreUi
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import com.bumptech.glide.Glide
 import info.fekri.boom.R
 import info.fekri.boom.databinding.ItemRecyclerHeroBinding
 import info.fekri.boom.extra.HeroesEvent
-import info.fekri.boom.ux.retrofit.models.HeroesData
+import info.fekri.boom.model.data.HeroesData
 
 @SuppressLint("SetTextI18n")
 class HeroesAdapter(

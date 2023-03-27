@@ -1,7 +1,7 @@
-package info.fekri.boom.ux.retrofit
+package info.fekri.boom.model.retrofit
 
 import info.fekri.boom.extra.BASE_URL_HEROES
-import info.fekri.boom.ux.retrofit.models.HeroesData
+import info.fekri.boom.model.data.HeroesData
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

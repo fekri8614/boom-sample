@@ -12,32 +12,32 @@
         android:orientation="vertical"
         android:padding="@dimen/space_16x">
 
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/lav_actionBar"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="0dp"
-            android:scaleType="centerCrop"
-            app:lottie_autoPlay="true"
-            app:lottie_fileName="lovely-owl.json"
-            app:lottie_loop="true" />
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@android:color/transparent"
+            app:cardCornerRadius="@dimen/space_48x"
+            app:cardElevation="@dimen/space_4x"
+            app:strokeColor="@color/yellow_back"
+            app:strokeWidth="@dimen/space_2x">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/space_16x"
+                app:srcCompat="@drawable/main_icon" />
+
+        </com.google.android.material.card.MaterialCardView>
 
         <androidx.appcompat.widget.AppCompatTextView
             style="@style/CoinBitText.Body3.Dark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/space_8x"
-            android:text="@string/welcome_text" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/space_8x"
-            android:text="@string/detail_welcome" />
+            android:layout_marginTop="@dimen/space_16x"
+            android:text="@string/about" />
 
         <View
             android:layout_width="100dp"
@@ -46,85 +46,66 @@
             android:layout_marginTop="@dimen/space_8x"
             android:background="@color/background_main" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/space_16x">
+            app:cardCornerRadius="@dimen/space_16x"
+            app:cardElevation="@dimen/space_2x"
+            android:backgroundTint="@color/green_back"
+            android:layout_margin="@dimen/space_16x">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/txtTitleDialog"
-                style="@style/CoinBitText.Body"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/desc_welcome"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/space_10x"
+                android:padding="@dimen/space_16x">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                style="@style/CoinBitText.BodyAlternate.Small"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:gravity="start"
-                android:text="@string/desc_welcome_desc"
-                app:guidelineUseRtl="true"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtTitleDialog" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/desc_welcome_desc"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4dp"
+                    style="@style/CoinBitText.TitleAlternate"/>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/space_10x"
+                    android:background="@color/grey_custom" />
 
-        <View
-            android:layout_width="100dp"
-            android:layout_height="1dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/space_16x"
-            android:background="@color/background_main" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/developer_mohammad_reza_fekri"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4dp"
+                    style="@style/CoinBitText.Title"/>
 
-        <androidx.appcompat.widget.AppCompatTextView
-            style="@style/CoinBitText.Body"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/space_16x"
-            android:text="@string/developer_mohammad_reza_fekri" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contact_data"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4dp"
+                    style="@style/CoinBitText.Title.Borwn"/>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/space_16x">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnGoWelcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="@string/go"
+                    style="@style/CoinBitText.Title.Light"
+                    android:layout_marginTop="@dimen/space_28x"/>
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/txtContactDialog"
-                style="@style/CoinBitText.Body"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/contact_txt"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-            <androidx.appcompat.widget.AppCompatTextView
-                style="@style/CoinBitText.BodyAlternate.Small"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:gravity="center|start"
-                android:padding="@dimen/space_8x"
-                android:text="@string/contact_data"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtContactDialog" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_go_welcome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginTop="@dimen/space_8x"
-            android:text="@string/go"
-            style="@style/CoinBitText.Title.Light"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

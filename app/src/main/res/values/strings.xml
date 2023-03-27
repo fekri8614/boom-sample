@@ -24,7 +24,7 @@
     <string name="desc_welcome">Description</string>
     <string name="desc_welcome_desc">You can use Boom to read books and make fun for kids. Boom allows you to read books offline, but for better performance of the application, it is better to use the application online. It is possible to make changes by long clicking.\nPlease, let me know if you have an idea about the application.\nThis application is mostly for kids. They can read and play with heroes. Game and reading together!\nFor a better view, turn the phone ninety degrees.</string>
     <string name="contact_txt">Contact me:</string>
-    <string name="contact_data">fekri.mohammadreza86@gmail.com</string>
+    <string name="contact_data">fekri8614@gmail.com</string>
     <string name="more">More!</string>
     <string name="free_books">Free books!</string>
     <string name="visit_library">Visit Library!</string>
@@ -49,7 +49,7 @@
     <string name="i_m_sure_to_buy">I\'m sure to buy</string>
     <string name="i_want_to_buy">I just want to buy</string>
     <string name="i_want_to_read">I just want to read</string>
-    <string name="developer_mohammad_reza_fekri">Developer: Mohammad-Reza Fekri</string>
+    <string name="developer_mohammad_reza_fekri">Developed by Mohammad-Reza Fekri</string>
     <string name="first_app">First Appearance</string>
     <string name="place_birth">Place of birth</string>
     <string name="publisher">Publisher</string>
@@ -77,4 +77,6 @@
     <string name="poems">Poems</string>
     <string name="for_you_free">For you(free)</string>
     <string name="pdf">PDF</string>
+    <string name="about">About!</string>
+    <string name="game">Game (kids)</string>
 </resources>

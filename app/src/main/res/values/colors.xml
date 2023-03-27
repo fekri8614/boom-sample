@@ -20,4 +20,7 @@
 
     <color name="background_main">#F8F2E4</color>
     <color name="yellow_back">#E8BC15</color>
+    <color name="green_back">#3342F554</color>
+    <color name="blue_back">#3342A5F5</color>
+
 </resources>
